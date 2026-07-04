@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "title": "Deep Biology",
+    "level": 2,
+    "author": "Physics Wallah",
+    "size": {
+      "rows": 12,
+      "cols": 12
+    },
+    "maxXP": 100,
+    "bonusXP": 20,
+    "timeLimit": 480
+  },
+  "clues": {
+    "across": [
+      {
+        "number": 1,
+        "clue": "The control centre of a cell that contains DNA",
+        "answer": "NUCLEUS",
+        "hint": "Remove this from a cell and it loses its 'instructions'",
+        "direction": "across",
+        "row": 0,
+        "col": 0
+      },
+      {
+        "number": 3,
+        "clue": "Group of similar cells performing the same function",
+        "answer": "TISSUE",
+        "hint": "Muscle cells group together to form this",
+        "direction": "across",
+        "row": 2,
+        "col": 0
+      },
+      {
+        "number": 5,
+        "clue": "A tiny hair-like structure on some bacteria used for movement",
+        "answer": "FLAGELLA",
+        "hint": "A bacterium spins this tail-like structure to swim",
+        "direction": "across",
+        "row": 4,
+        "col": 0
+      },
+      {
+        "number": 7,
+        "clue": "The process of using microbes to produce beer or bread (yeast activity)",
+        "answer": "FERMENTATION",
+        "hint": "Yeast converts sugar to alcohol and CO₂ through this process",
+        "direction": "across",
+        "row": 6,
+        "col": 0
+      },
+      {
+        "number": 9,
+        "clue": "Membrane-bound structures within a cell (e.g. mitochondria)",
+        "answer": "ORGANELLES",
+        "hint": "Mitochondria are the 'powerhouse' — a type of this",
+        "direction": "across",
+        "row": 8,
+        "col": 0
+      }
+    ],
+    "down": [
+      {
+        "number": 1,
+        "clue": "Single-celled microorganism without a defined nucleus",
+        "answer": "BACTERIA",
+        "hint": "Some cause disease, others make your curd — these tiny cells are everywhere",
+        "direction": "down",
+        "row": 0,
+        "col": 1
+      },
+      {
+        "number": 2,
+        "clue": "Organisms composed of many cells (e.g. humans)",
+        "answer": "MULTICELLULAR",
+        "hint": "You are one — built from trillions of cells working together",
+        "direction": "down",
+        "row": 0,
+        "col": 6
+      },
+      {
+        "number": 4,
+        "clue": "Microscopic plant-like organisms that perform photosynthesis in water",
+        "answer": "MICROALGAE",
+        "hint": "These tiny green organisms float in oceans and produce oxygen",
+        "direction": "down",
+        "row": 2,
+        "col": 4
+      },
+      {
+        "number": 6,
+        "clue": "Single-celled organism with a nucleus, e.g. Amoeba or Paramecium",
+        "answer": "PROTOZOA",
+        "hint": "Amoeba uses pseudopodia; Paramecium uses cilia — both belong here",
+        "direction": "down",
+        "row": 4,
+        "col": 7
+      },
+      {
+        "number": 8,
+        "clue": "Microbes used to enrich soil through nitrogen fixation",
+        "answer": "MANURE",
+        "hint": "Microbes that decompose farm waste produce this natural fertiliser",
+        "direction": "down",
+        "row": 6,
+        "col": 10
+      }
+    ]
+  }
+}

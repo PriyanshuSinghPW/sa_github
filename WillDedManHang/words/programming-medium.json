@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "ALGORITHM",
+      "category": "Programming",
+      "hint": "Step-by-step procedure for solving a problem",
+      "educational": "An algorithm is a finite sequence of well-defined instructions to solve a problem. Examples include sorting algorithms, search algorithms, and pathfinding algorithms."
+    },
+    {
+      "word": "RECURSION",
+      "category": "Programming",
+      "hint": "Function that calls itself to solve problems",
+      "educational": "Recursion solves problems by breaking them into smaller instances of the same problem. Classic examples include factorial calculation and tree traversal."
+    },
+    {
+      "word": "POLYMORPHISM",
+      "category": "Programming",
+      "hint": "Ability of objects to take many forms in OOP",
+      "educational": "Polymorphism allows objects of different types to be treated as objects of a common type. It's a core concept in object-oriented programming."
+    },
+    {
+      "word": "INHERITANCE",
+      "category": "Programming",
+      "hint": "Mechanism where one class acquires properties of another",
+      "educational": "Inheritance allows a class to inherit properties and methods from another class, promoting code reuse and establishing hierarchical relationships."
+    },
+    {
+      "word": "ENCAPSULATION",
+      "category": "Programming",
+      "hint": "Bundling data and methods that operate on it",
+      "educational": "Encapsulation is the practice of keeping data and methods together in a class while restricting direct access to some components."
+    },
+    {
+      "word": "MIDDLEWARE",
+      "category": "Programming",
+      "hint": "Software between operating system and applications",
+      "educational": "Middleware acts as a bridge between different applications or services, enabling communication and data management."
+    },
+    {
+      "word": "FRAMEWORK",
+      "category": "Programming",
+      "hint": "Platform providing foundation for software development",
+      "educational": "Frameworks provide reusable code and structure for building applications. Examples include React, Django, and Spring Boot."
+    },
+    {
+      "word": "REPOSITORY",
+      "category": "Programming",
+      "hint": "Central location where code is stored and managed",
+      "educational": "A repository (or repo) is a storage location for software packages, often used with version control systems like Git."
+    },
+    {
+      "word": "DEPLOYMENT",
+      "category": "Programming",
+      "hint": "Process of making software available for use",
+      "educational": "Deployment involves releasing, installing, and configuring software in a production environment where users can access it."
+    },
+    {
+      "word": "REFACTORING",
+      "category": "Programming",
+      "hint": "Improving code structure without changing behavior",
+      "educational": "Refactoring is the process of restructuring existing code to improve its design, readability, and maintainability without altering its functionality."
+    }
+  ]
+}

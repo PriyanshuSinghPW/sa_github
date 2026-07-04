@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "HTML",
+      "category": "Programming",
+      "hint": "Markup language used to create web pages",
+      "educational": "HTML (HyperText Markup Language) is the standard language for creating web pages. It defines the structure and content of websites."
+    },
+    {
+      "word": "LOOP",
+      "category": "Programming",
+      "hint": "Repeats a block of code multiple times",
+      "educational": "Loops are fundamental programming constructs that allow you to execute code repeatedly. Common types include for, while, and do-while loops."
+    },
+    {
+      "word": "ARRAY",
+      "category": "Programming",
+      "hint": "Data structure that stores multiple values in order",
+      "educational": "Arrays are ordered collections of elements. They allow you to store and access multiple values using numerical indices."
+    },
+    {
+      "word": "CLASS",
+      "category": "Programming",
+      "hint": "Blueprint for creating objects in OOP",
+      "educational": "In Object-Oriented Programming, a class is a template that defines the properties and methods that objects will have."
+    },
+    {
+      "word": "STRING",
+      "category": "Programming",
+      "hint": "Data type for text and characters",
+      "educational": "Strings are sequences of characters used to represent text in programming. They're one of the most commonly used data types."
+    },
+    {
+      "word": "DEBUG",
+      "category": "Programming",
+      "hint": "Finding and fixing errors in code",
+      "educational": "Debugging is the process of identifying, analyzing, and removing bugs or errors from computer programs."
+    },
+    {
+      "word": "FUNCTION",
+      "category": "Programming",
+      "hint": "Reusable block of code that performs a task",
+      "educational": "Functions are self-contained blocks of code that perform specific tasks. They help organize code and promote reusability."
+    },
+    {
+      "word": "VARIABLE",
+      "category": "Programming",
+      "hint": "Named storage location for data",
+      "educational": "Variables store data values that can be used and modified throughout a program. They're essential for dynamic programming."
+    },
+    {
+      "word": "SYNTAX",
+      "category": "Programming",
+      "hint": "Rules for writing valid code",
+      "educational": "Syntax refers to the set of rules that define how programs are written in a programming language. Correct syntax is crucial for code to run."
+    },
+    {
+      "word": "BOOLEAN",
+      "category": "Programming",
+      "hint": "Data type with only true or false values",
+      "educational": "Booleans are logical data types that can only be true or false. They're essential for conditional statements and logical operations."
+    }
+  ]
+}

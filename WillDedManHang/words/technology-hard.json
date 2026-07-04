@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "BLOCKCHAIN",
+      "category": "Technology",
+      "hint": "Distributed ledger technology for transactions",
+      "educational": "Blockchain is a decentralized digital ledger recording transactions across many computers. It's the technology behind cryptocurrencies like Bitcoin."
+    },
+    {
+      "word": "VIRTUALIZATION",
+      "category": "Technology",
+      "hint": "Creating virtual versions of computing resources",
+      "educational": "Virtualization creates virtual versions of hardware, storage, or networks, allowing multiple operating systems to run on one physical machine."
+    },
+    {
+      "word": "CYBERSECURITY",
+      "category": "Technology",
+      "hint": "Protection of computer systems from threats",
+      "educational": "Cybersecurity protects systems, networks, and data from digital attacks, unauthorized access, and damage through various security measures."
+    },
+    {
+      "word": "ARTIFICIAL",
+      "category": "Technology",
+      "hint": "Intelligence exhibited by machines",
+      "educational": "Artificial Intelligence (AI) enables machines to perform tasks requiring human intelligence, including learning, reasoning, and problem-solving."
+    },
+    {
+      "word": "QUANTUM",
+      "category": "Technology",
+      "hint": "Computing using quantum mechanical phenomena",
+      "educational": "Quantum computing uses quantum mechanics principles to process information exponentially faster than traditional computers for certain problems."
+    },
+    {
+      "word": "NANOTECHNOLOGY",
+      "category": "Technology",
+      "hint": "Manipulation of matter at atomic scale",
+      "educational": "Nanotechnology engineers materials at nanoscale (1-100 nanometers), creating new properties for medicine, electronics, and materials science."
+    },
+    {
+      "word": "BIOMETRIC",
+      "category": "Technology",
+      "hint": "Authentication using physical characteristics",
+      "educational": "Biometric systems use unique biological characteristics like fingerprints, facial recognition, or iris scans for identification and security."
+    },
+    {
+      "word": "SEMICONDUCTOR",
+      "category": "Technology",
+      "hint": "Material with conductivity between conductor and insulator",
+      "educational": "Semiconductors like silicon are essential for modern electronics, enabling transistors, microchips, and integrated circuits in all digital devices."
+    },
+    {
+      "word": "AUTONOMOUS",
+      "category": "Technology",
+      "hint": "Self operating systems without human intervention",
+      "educational": "Autonomous systems can operate independently using AI and sensors. Examples include self-driving cars, drones, and industrial robots."
+    },
+    {
+      "word": "METAVERSE",
+      "category": "Technology",
+      "hint": "Virtual shared space using augmented reality",
+      "educational": "The metaverse is a network of 3D virtual worlds focused on social connection, combining virtual reality, augmented reality, and the internet."
+    }
+  ]
+}

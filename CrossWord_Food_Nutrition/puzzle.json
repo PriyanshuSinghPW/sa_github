@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "id": "level_1",
+    "title": "Nutrients in Food",
+    "author": "Shivansh",
+    "difficulty": "medium",
+    "size": {
+      "rows": 12,
+      "cols": 12
+    }
+  },
+  "clues": {
+    "across": [
+      {
+        "number": 1,
+        "clue": "Helps build muscles and body parts",
+        "answer": "Protein",
+        "direction": "across",
+        "row": 0,
+        "col": 1
+      },
+      {
+        "number": 2,
+        "clue": "A simple sugar that is the body's main source of energy",
+        "answer": "Glucose",
+        "direction": "across",
+        "row": 4,
+        "col": 5
+      },
+      {
+        "number": 3,
+        "clue": "A mineral that helps regulate the body's fluid balance",
+        "answer": "Enzyme",
+        "direction": "across",
+        "row": 7,
+        "col": 0
+      },
+      {
+        "number": 4,
+        "clue": "A mineral that helps carry oxygen in the blood",
+        "answer": "iron",
+        "direction": "across",
+        "row": 8,
+        "col": 8
+      },
+      {
+        "number": 5,
+        "clue": "A mineral that helps regulate the body's fluid balance",
+        "answer": "sodium",
+        "direction": "across",
+        "row": 10,
+        "col": 3
+      }
+    ],
+    "down": [
+      {
+        "number": 6,
+        "clue": "A mineral that helps the immune system fight off illness",
+        "answer": "omega",
+        "direction": "down",
+        "row": 0,
+        "col": 3
+      },
+      {
+        "number": 7,
+        "clue": "The power obtained from food to do work or be active",
+        "answer": "Energy",
+        "direction": "down",
+        "row": 0,
+        "col": 5
+      },
+      {
+        "number": 8,
+        "clue": "A mineral that helps the immune system fight off illness",
+        "answer": "zinc",
+        "direction": "down",
+        "row": 1,
+        "col": 8
+      },
+      {
+        "number": 9,
+        "clue": "We drink it every day; helps control body temperature",
+        "answer": "WATER",
+        "direction": "down",
+        "row": 4,
+        "col": 0
+      },
+      {
+        "number": 10,
+        "clue": "A mineral that helps build strong bones and teeth",
+        "answer": "Calcium",
+        "direction": "down",
+        "row": 4,
+        "col": 8
+      }
+    ]
+  }
+}

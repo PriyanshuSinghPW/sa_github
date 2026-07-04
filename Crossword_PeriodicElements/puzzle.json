@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "title": "Chemical Elements Crossword",
+    "author": "Science Tutor",
+    "size": {
+      "rows": 15,
+      "cols": 15
+    }
+  },
+  "clues": {
+    "across": [
+      {
+        "number": 1,
+        "clue": "Mg",
+        "answer": "MAGNESIUM",
+        "direction": "across",
+        "row": 1,
+        "col": 5
+      },
+      {
+        "number": 3,
+        "clue": "Ca",
+        "answer": "CALCIUM",
+        "direction": "across",
+        "row": 3,
+        "col": 8
+      },
+      {
+        "number": 6,
+        "clue": "Ni",
+        "answer": "NICKEL",
+        "direction": "across",
+        "row": 5,
+        "col": 8
+      },
+      {
+        "number": 7,
+        "clue": "Fe",
+        "answer": "IRON",
+        "direction": "across",
+        "row": 6,
+        "col": 2
+      },
+      {
+        "number": 8,
+        "clue": "C",
+        "answer": "CARBON",
+        "direction": "across",
+        "row": 7,
+        "col": 5
+      },
+      {
+        "number": 10,
+        "clue": "Ne",
+        "answer": "NEON",
+        "direction": "across",
+        "row": 9,
+        "col": 1
+      },
+      {
+        "number": 12,
+        "clue": "Cu",
+        "answer": "COPPER",
+        "direction": "across",
+        "row": 11,
+        "col": 5
+      },
+      {
+        "number": 13,
+        "clue": "Pb",
+        "answer": "LEAD",
+        "direction": "across",
+        "row": 13,
+        "col": 3
+      }
+    ],
+    "down": [
+      {
+        "number": 2,
+        "clue": "Si",
+        "answer": "SILICON",
+        "direction": "down",
+        "row": 1,
+        "col": 10
+      },
+      {
+        "number": 4,
+        "clue": "Zn",
+        "answer": "ZINC",
+        "direction": "down",
+        "row": 4,
+        "col": 5
+      },
+      {
+        "number": 5,
+        "clue": "Ag",
+        "answer": "SILVER",
+        "direction": "down",
+        "row": 5,
+        "col": 2
+      },
+      {
+        "number": 9,
+        "clue": "O",
+        "answer": "OXYGEN",
+        "direction": "down",
+        "row": 7,
+        "col": 9
+      },
+      {
+        "number": 11,
+        "clue": "Au",
+        "answer": "GOLD",
+        "direction": "down",
+        "row": 10,
+        "col": 6
+      }
+    ]
+  }
+}

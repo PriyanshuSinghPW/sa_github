@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "ASYNCHRONOUS",
+      "category": "Programming",
+      "hint": "Operations that don't block program execution",
+      "educational": "Asynchronous programming allows operations to run independently without waiting for others to complete, improving performance and responsiveness."
+    },
+    {
+      "word": "ABSTRACTION",
+      "category": "Programming",
+      "hint": "Hiding complex details behind simple interfaces",
+      "educational": "Abstraction is the process of hiding implementation details while exposing only essential features, making systems easier to understand and use."
+    },
+    {
+      "word": "MICROSERVICES",
+      "category": "Programming",
+      "hint": "Architectural style with small independent services",
+      "educational": "Microservices architecture breaks applications into small, loosely coupled services that can be developed, deployed, and scaled independently."
+    },
+    {
+      "word": "CONTAINERIZATION",
+      "category": "Programming",
+      "hint": "Packaging software with dependencies for consistency",
+      "educational": "Containerization packages applications with all dependencies into portable units that run consistently across different environments. Docker is a popular tool."
+    },
+    {
+      "word": "AUTHENTICATION",
+      "category": "Programming",
+      "hint": "Verifying identity of users or systems",
+      "educational": "Authentication is the process of confirming that someone or something is who they claim to be, essential for security in applications."
+    },
+    {
+      "word": "SERIALIZATION",
+      "category": "Programming",
+      "hint": "Converting objects to format for storage or transmission",
+      "educational": "Serialization transforms objects into a format (like JSON or binary) that can be stored or transmitted, then reconstructed later."
+    },
+    {
+      "word": "MULTITHREADING",
+      "category": "Programming",
+      "hint": "Running multiple threads concurrently in a program",
+      "educational": "Multithreading allows a program to execute multiple tasks simultaneously, improving performance on multi-core processors."
+    },
+    {
+      "word": "DEPENDENCY",
+      "category": "Programming",
+      "hint": "External code library that a program relies on",
+      "educational": "Dependencies are external packages or libraries that your code needs to function. Managing dependencies is crucial for maintainable projects."
+    },
+    {
+      "word": "OPTIMIZATION",
+      "category": "Programming",
+      "hint": "Improving code performance and efficiency",
+      "educational": "Code optimization involves modifying programs to work more efficiently, using less memory, processing faster, or consuming less power."
+    },
+    {
+      "word": "CRYPTOGRAPHY",
+      "category": "Programming",
+      "hint": "Science of secure communication through encryption",
+      "educational": "Cryptography uses mathematical techniques to secure data through encryption and decryption, essential for protecting sensitive information."
+    }
+  ]
+}

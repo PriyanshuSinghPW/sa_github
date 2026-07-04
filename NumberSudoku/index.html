@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Play Sudoku - Challenge your mind with logic puzzles">
+    <title>Sudoku Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home Screen -->
+    <div class="home-container" id="home-screen">
+        <div class="hero-section">
+            <div class="theme-toggle" id="theme-toggle-home" title="Toggle Theme">
+                <svg class="sun-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                </svg>
+                <svg class="moon-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </div>
+            
+            <h1 class="gradient-title hero-title">
+                <span class="letter letter-1">S</span><span class="letter letter-2">U</span><span class="letter letter-3">D</span><span class="letter letter-4">O</span><span class="letter letter-5">K</span><span class="letter letter-6">U</span>
+            </h1>
+            <p class="subtitle">Challenge your mind with logic puzzles</p>
+            
+            <div class="home-actions">
+                <button id="play-game-btn" class="primary-btn large-btn">Play Game</button>
+                <button id="how-to-play-btn" class="secondary-btn large-btn">How to Play</button>
+            </div>
+        </div>
+
+        <!-- How to Play Modal -->
+        <div id="how-to-play-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>How to Play Sudoku</h2>
+                    <button id="close-modal-btn" class="close-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="instruction-step">
+                        <span class="step-number">1</span>
+                        <p>Fill the grid so that every row, column, and 3x3 box contains the digits 1 through 9.</p>
+                    </div>
+                    <div class="instruction-step">
+                        <span class="step-number">2</span>
+                        <p>Each number can only appear once in each row, column, and box.</p>
+                    </div>
+                    <div class="instruction-step">
+                        <span class="step-number">3</span>
+                        <p>Use logic to deduce the missing numbers. No guessing required!</p>
+                    </div>
+                    <div class="instruction-step">
+                        <span class="step-number">4</span>
+                        <p>Use Undo and Erase tools to manage your input if you get stuck.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="app-container hidden" id="game-screen">
+        <header>
+            <div class="header-top">
+                <button class="back-btn" id="home-btn" title="Home">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                </button>
+                <h1 class="gradient-title">
+                    <span class="letter letter-1">S</span><span class="letter letter-2">U</span><span class="letter letter-3">D</span><span class="letter letter-4">O</span><span class="letter letter-5">K</span><span class="letter letter-6">U</span>
+                </h1>
+                <div class="theme-toggle" id="theme-toggle-game" title="Toggle Theme">
+                    <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                    </svg>
+                    <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="game-info">
+                <div class="difficulty-selector">
+                    <button class="diff-btn active" data-diff="easy">Easy</button>
+                    <button class="diff-btn" data-diff="medium">Medium</button>
+                    <button class="diff-btn" data-diff="hard">Hard</button>
+                </div>
+                <div class="timer-container">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <div class="timer" id="timer">00:00</div>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-board-container">
+            <div id="sudoku-board" class="board"></div>
+        </main>
+
+        <div class="controls-area">
+            <div class="numpad">
+                <button class="num-btn" data-num="1"><span class="gradient-num">1</span></button>
+                <button class="num-btn" data-num="2"><span class="gradient-num">2</span></button>
+                <button class="num-btn" data-num="3"><span class="gradient-num">3</span></button>
+                <button class="num-btn" data-num="4"><span class="gradient-num">4</span></button>
+                <button class="num-btn" data-num="5"><span class="gradient-num">5</span></button>
+                <button class="num-btn" data-num="6"><span class="gradient-num">6</span></button>
+                <button class="num-btn" data-num="7"><span class="gradient-num">7</span></button>
+                <button class="num-btn" data-num="8"><span class="gradient-num">8</span></button>
+                <button class="num-btn" data-num="9"><span class="gradient-num">9</span></button>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="action-btn icon-btn" id="undo-btn" title="Undo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 7v6h6"></path>
+                        <path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"></path>
+                    </svg>
+                    <span>Undo</span>
+                </button>
+                <button class="action-btn icon-btn" id="erase-btn" title="Erase">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"></path>
+                        <line x1="18" y1="9" x2="12" y2="15"></line>
+                        <line x1="12" y1="9" x2="18" y2="15"></line>
+                    </svg>
+                    <span>Erase</span>
+                </button>
+                <!-- Notes option removed -->
+            </div>
+
+            <div class="game-actions">
+                <button id="new-game-btn" class="primary-btn">New Game</button>
+                <button id="submit-btn" class="secondary-btn">Submit</button>
+            </div>
+        </div>
+        
+        <div id="message" class="toast hidden"></div>
+    </div>
+
+    <!-- Load AnalyticsManager first, then main script -->
+    <script src="js-analytics-bridge/dist/analytics-bridge.js?v=2"></script>
+    <script src="script.js?v=2"></script>
+</body>
+</html>

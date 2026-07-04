@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "PYRAMID",
+      "category": "History",
+      "hint": "Ancient Egyptian monumental structure",
+      "educational": "Pyramids are ancient structures built as tombs for pharaohs. The Great Pyramid of Giza is one of the Seven Wonders of the Ancient World."
+    },
+    {
+      "word": "EMPIRE",
+      "category": "History",
+      "hint": "Large territory ruled by a single authority",
+      "educational": "An empire is an extensive group of states or countries under a single supreme authority. Famous examples include Roman, British, and Mongol empires."
+    },
+    {
+      "word": "MEDIEVAL",
+      "category": "History",
+      "hint": "Period between ancient and modern times",
+      "educational": "The Medieval period (Middle Ages) lasted from the 5th to 15th century in Europe, characterized by feudalism, castles, and knights."
+    },
+    {
+      "word": "WARRIOR",
+      "category": "History",
+      "hint": "Brave fighter especially in ancient times",
+      "educational": "Warriors were skilled fighters in many ancient cultures. Examples include samurai in Japan, Vikings in Scandinavia, and Spartans in Greece."
+    },
+    {
+      "word": "COLONY",
+      "category": "History",
+      "hint": "Territory under control of another country",
+      "educational": "A colony is a territory controlled by a foreign power. European colonization greatly impacted the Americas, Africa, and Asia."
+    },
+    {
+      "word": "REVOLUTION",
+      "category": "History",
+      "hint": "Major change in government or society",
+      "educational": "A revolution is a fundamental change in political power. Major examples include the French Revolution and American Revolution."
+    },
+    {
+      "word": "DYNASTY",
+      "category": "History",
+      "hint": "Line of rulers from the same family",
+      "educational": "A dynasty is a sequence of rulers from the same family. China had many dynasties including Ming, Qing, and Tang."
+    },
+    {
+      "word": "TREATY",
+      "category": "History",
+      "hint": "Formal agreement between countries",
+      "educational": "A treaty is a formally concluded agreement between states. They've been used throughout history to end wars and establish alliances."
+    },
+    {
+      "word": "PHARAOH",
+      "category": "History",
+      "hint": "Title for ancient Egyptian kings",
+      "educational": "Pharaohs were the rulers of ancient Egypt, considered living gods. Famous pharaohs include Tutankhamun, Ramesses II, and Cleopatra."
+    },
+    {
+      "word": "ARTIFACT",
+      "category": "History",
+      "hint": "Object made by humans in the past",
+      "educational": "Artifacts are objects created by humans, studied by archaeologists to learn about past cultures, technologies, and daily life."
+    }
+  ]
+}

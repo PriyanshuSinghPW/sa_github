@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "title": "World Capitals Crossword (10x10)",
+    "author": "Geography Tutor",
+    "size": { "rows": 15, "cols": 15 }
+  },
+  "clues": {
+    "across": [
+      {
+        "number": 1,
+        "clue": "South Korea",
+        "answer": "SEOUL",
+        "direction": "across",
+        "row": 0,
+        "col": 3
+      },
+      {
+        "number": 6,
+        "clue": "India",
+        "answer": "NewDelhi",
+        "direction": "across",
+        "row": 2,
+        "col": 7
+      },
+      {
+        "number": 9,
+        "clue": "New Zealand",
+        "answer": "WELLINGTON",
+        "direction": "across",
+        "row": 7,
+        "col": 0
+      },
+      {
+        "number": 11,
+        "clue": "Italy",
+        "answer": "ROME",
+        "direction": "across",
+        "row": 9,
+        "col": 1
+      },
+      {
+        "number": 14,
+        "clue": "Japan",
+        "answer": "TOKYO",
+        "direction": "across",
+        "row": 10,
+        "col": 5
+      },
+      {
+        "number": 16,
+        "clue": "France",
+        "answer": "PARIS",
+        "direction": "across",
+        "row": 13,
+        "col": 8
+      }
+    ],
+    "down": [
+      {
+        "number": 2,
+        "clue": "United Kingdom",
+        "answer": "LONDON",
+        "direction": "down",
+        "row": 0,
+        "col": 7
+      },
+      {
+        "number": 3,
+        "clue": "Egypt",
+        "answer": "CAIRO",
+        "direction": "down",
+        "row": 0,
+        "col": 14
+      },
+      {
+        "number": 4,
+        "clue": "China",
+        "answer": "BEIJING",
+        "direction": "down",
+        "row": 1,
+        "col": 11
+      },
+      {
+        "number": 5,
+        "clue": "Germany",
+        "answer": "BERLIN",
+        "direction": "down",
+        "row": 9,
+        "col": 11
+      },
+      {
+        "number": 7,
+        "clue": "USA",
+        "answer": "WASHINGTON",
+        "direction": "down",
+        "row": 2,
+        "col": 9
+      },
+      {
+        "number": 8,
+        "clue": "Australia",
+        "answer": "CANBERRA",
+        "direction": "down",
+        "row": 3,
+        "col": 1
+      },
+      {
+        "number": 10,
+        "clue": "Belgium",
+        "answer": "BRUSSELS",
+        "direction": "down",
+        "row": 7,
+        "col": 14
+      },
+      {
+        "number": 12,
+        "clue": "Russia",
+        "answer": "MOSCOW",
+        "direction": "down",
+        "row": 9,
+        "col": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="title">🔍 Word Search</title>
+  <link rel="stylesheet" href="Shared/base.css" />
+  <link rel="stylesheet" href="Shared/victoryScreen.css" />
+  <link rel="stylesheet" href="wordsearch.css" />
+</head>
+<body>
+
+  <!-- HOME SCREEN -->
+  <div id="homeScreen" class="screen active">
+    <div class="home-container">
+      <!-- Comic-style Header -->
+      <div class="comic-header">
+        <img src="image/Word_search_title.png" alt="Word Search Title" class="title-image" />
+      </div>
+
+      <div class="game-settings">
+        <!-- PICK A TOPIC -->
+        <div class="setting-group">
+          <label class="setting-label">PICK A TOPIC</label>
+          <div class="custom-select-wrapper">
+            <span class="topic-icon">🌍</span>
+            <select id="categorySelect"></select>
+          </div>
+        </div>
+
+        <!-- DIFFICULTY -->
+        <div class="setting-group">
+          <label class="setting-label">DIFFICULTY</label>
+          <div class="difficulty-buttons">
+            <button class="difficulty-btn" data-difficulty="easy">Easy<span class="check-badge">✓</span></button>
+            <button class="difficulty-btn active" data-difficulty="medium">Medium<span class="check-badge">✓</span></button>
+            <button class="difficulty-btn" data-difficulty="hard">Hard<span class="check-badge">✓</span></button>
+          </div>
+          <select id="difficultySelect" style="display: none;">
+            <option value="easy" data-i18n="easy">Easy</option>
+            <option value="medium" data-i18n="medium" selected>Medium</option>
+            <option value="hard" data-i18n="hard">Hard</option>
+          </select>
+        </div>
+
+        <!-- WORDS TO FIND -->
+        <div class="setting-group">
+          <label class="setting-label">WORDS TO FIND</label>
+          <div class="counter-wrapper">
+            <button class="counter-btn minus-btn" id="decreaseWords">−</button>
+            <input type="number" id="wordCount" class="word-count-input" value="10" min="1" max="20" readonly />
+            <button class="counter-btn plus-btn" id="increaseWords">+</button>
+          </div>
+        </div>
+
+        <!-- PLAY GAME BUTTON -->
+        <button id="startButton" class="start-button">
+          PLAY GAME
+        </button>
+      </div>
+
+      <div class="bottom-controls">
+        <button id="audioToggle" class="audio-btn" title="Toggle Music">🔇</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div id="gameScreen" class="screen">
+    <div class="game-header">
+      <button id="backToHome" class="back-btn">← Home</button>
+      <div class="game-stats">
+        <div class="stat-item">
+          <span class="stat-label" data-i18n="timer">Time</span>
+          <span id="timerDisplay" class="stat-value">10:00</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label" data-i18n="score">Score</span>
+          <span id="scoreDisplay" class="stat-value">200</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label" data-i18n="found">Found</span>
+          <span id="foundDisplay" class="stat-value">0/0</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="gameWrapper">
+      <div class="side-list">
+        <h3 data-i18n="toFind">Words to Find</h3>
+        <div id="wordListToFind"></div>
+        <div id="hintControls">
+          <button id="hintButton" class="hint-btn" data-i18n="hint">💡 Hint</button>
+        </div>
+      </div>
+
+      <div id="gridContainer">
+        <div id="grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VICTORY SCREEN -->
+  <div id="victoryScreen">
+    <canvas id="confettiCanvas"></canvas>
+    <div id="victoryMessage">🎉 You won! 🎉</div>
+    <div id="finalScore"></div>
+    <button id="skipVictory">Continue</button>
+  </div>
+
+  <!-- CONFIRMATION MODAL -->
+  <div id="confirmModal" class="modal">
+    <div class="modal-content">
+      <h2 class="modal-title">Exit Game?</h2>
+      <p class="modal-message">Are you sure you want to exit? Your progress will be lost.</p>
+      <div class="modal-buttons">
+        <button id="confirmYes" class="modal-btn modal-btn-yes">Yes, Exit</button>
+        <button id="confirmNo" class="modal-btn modal-btn-no">No, Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Analytics must load FIRST -->
+  <script src="js-analytics-bridge/dist/analytics-bridge.js"></script>
+  <script type="module" src="wordsearch.js"></script>
+</body>
+</html>

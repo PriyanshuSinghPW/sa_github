@@ -1,0 +1,26 @@
+﻿{
+  "metadata": {
+    "title": "Crossword Modal Mastery",
+    "author": "Physics Wallah",
+    "level": 2,
+    "difficulty": "Modal Master",
+    "size": { "rows": 12, "cols": 12 },
+    "bonusXP": 30
+  },
+  "clues": {
+    "across": [
+      { "number": 1,  "clue": "Students ___ respect their teachers. (duty)",          "answer": "SHOULD", "direction": "across", "row": 0,  "col": 0, "hint": "This modal is used to express duty or obligation in a mild way." },
+      { "number": 4,  "clue": "She ___ solve this problem easily. (ability)",         "answer": "CAN",    "direction": "across", "row": 2,  "col": 2, "hint": "Modal expressing present ability." },
+      { "number": 6,  "clue": "You ___ not enter without permission. (prohibition)",  "answer": "CANNOT", "direction": "across", "row": 4,  "col": 0, "hint": "The negative modal expressing that something is not allowed or possible." },
+      { "number": 7,  "clue": "___ you lend me your book? (polite request)",          "answer": "WOULD",  "direction": "across", "row": 5,  "col": 2, "hint": "Used for making polite requests." },
+      { "number": 8,  "clue": "We ___ reach the station before time. (future certainty)", "answer": "WILL", "direction": "across", "row": 6,  "col": 2, "hint": "Expresses future certainty or determination." },
+      { "number": 9,  "clue": "___ I use your pen? (permission)",                     "answer": "MAY",    "direction": "across", "row": 8,  "col": 0, "hint": "Formal modal for asking permission." },
+      { "number": 10, "clue": "He ___ be at home; the lights are on. (strong possibility)", "answer": "MIGHT", "direction": "across", "row": 10, "col": 0, "hint": "Expresses possibility, weaker than must." }
+    ],
+    "down": [
+      { "number": 2,  "clue": "You ___ obey your parents. (duty/obligation)",         "answer": "MUST",   "direction": "down",   "row": 1,  "col": 5, "hint": "Strong modal of obligation or necessity." },
+      { "number": 3,  "clue": "___ we go out for a walk? (suggestion)",               "answer": "SHALL",  "direction": "down",   "row": 2,  "col": 1, "hint": "Used for formal suggestions, especially with we." },
+      { "number": 5,  "clue": "When I was young, I ___ run very fast. (past ability)", "answer": "COULD",  "direction": "down",   "row": 3,  "col": 4, "hint": "Past form of can, used to talk about past abilities." }
+    ]
+  }
+}

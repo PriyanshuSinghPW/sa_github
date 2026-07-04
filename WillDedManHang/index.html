@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DeadHang - Hangman Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2.4">
+</head>
+<body>
+    <!-- Home Screen - Main Title Screen -->
+    <div id="homeScreen" class="screen active">
+        <div class="title-screen">
+            <h1 class="main-title">DEDMANHANG</h1>
+            <button class="btn-start" id="startBtn">START GAME</button>
+        </div>
+    </div>
+
+    <!-- Game Setup Modal -->
+    <div id="setupModal" class="modal">
+        <div class="modal-content setup-modal">
+            <h2 class="setup-title">DEADHANG</h2>
+            <p class="setup-subtitle">CAN YOU SAVE THE STICK FIGURE?</p>
+            
+            <div class="setup-section">
+                <label class="setup-label">• SELECT CATEGORY</label>
+                <div class="category-buttons">
+                    <button class="category-btn" data-category="programming">Programming</button>
+                    <button class="category-btn" data-category="science">Science</button>
+                    <button class="category-btn" data-category="history">History</button>
+                    <button class="category-btn" data-category="geography">Geography</button>
+                    <button class="category-btn active" data-category="technology">Technology</button>
+                </div>
+            </div>
+
+            <div class="setup-section">
+                <label class="setup-label">• DIFFICULTY LEVEL</label>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn active" data-difficulty="easy">Easy</button>
+                    <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                    <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+                </div>
+            </div>
+
+            <button class="btn-start-game" id="playBtn">START GAME</button>
+            <button class="btn-how-to-play" id="howToPlayBtn">HOW TO PLAY</button>
+        </div>
+    </div>
+
+    <!-- How to Play Modal -->
+    <div id="howToPlayModal" class="modal">
+        <div class="modal-content how-to-play-content">
+            <span class="close-btn">&times;</span>
+            <h2>HOW TO SURVIVE</h2>
+            <div class="instructions">
+                <div class="instruction-item" data-icon="T">
+                    <strong>Choose letters carefully</strong>
+                </div>
+                <div class="instruction-item" data-icon="⚠">
+                    <strong>Wrong guess brings him closer to death</strong>
+                </div>
+                <div class="instruction-item" data-icon="✕">
+                    <strong>Only 6 mistakes allowed</strong>
+                </div>
+                <div class="instruction-item" data-icon="💀">
+                    <strong>Guess the word to save him</strong>
+                </div>
+                <div class="instruction-tip" data-icon="💡">
+                    <em>Start with vowels... if you want him to survive.</em>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen (Flattened Structure for Dual Layouts) -->
+    <div id="gameScreen" class="screen">
+        <div class="game-container">
+            <!-- 1. Header Area -->
+            <div class="game-area-header">
+                <div class="header-controls">
+                    <button class="btn-back" id="backBtn">Back</button>
+                </div>
+                <div class="game-stats">
+                    <div class="stat-box">Round: <span id="currentRound">1</span>/10</div>
+                    <div class="stat-box">Score: <span id="currentScore">0</span></div>
+                    <div class="stat-box">Lives: <span id="livesCount">6</span></div>
+                    <div class="stat-box">Time: <span id="timer">0:00</span></div>
+                </div>
+            </div>
+
+            <!-- 2. Category Area -->
+            <div class="game-area-category">
+                <span class="cat-label">Category:</span>
+                <span class="cat-val" id="categoryDisplay">---</span>
+            </div>
+
+            <!-- 3. Visual Area (Hangman) -->
+            <div class="game-area-visual">
+                <div class="visual-wrapper">
+                    <svg viewBox="0 0 300 300" id="hangmanSvg">
+                        <!-- Base/Pole -->
+                        <line x1="20" y1="280" x2="140" y2="280" class="draw-base"/>
+                        <line x1="80" y1="280" x2="80" y2="20" class="draw-base"/>
+                        <line x1="80" y1="20" x2="200" y2="20" class="draw-base"/>
+                        <line x1="200" y1="20" x2="200" y2="50" class="draw-rope"/>
+                        
+                        <!-- Body Parts -->
+                        <circle cx="200" cy="80" r="30" class="hangman-part hidden" id="head"/>
+                        <line x1="200" y1="110" x2="200" y2="190" class="hangman-part hidden" id="body"/>
+                        <line x1="200" y1="130" x2="160" y2="170" class="hangman-part hidden" id="leftArm"/>
+                        <line x1="200" y1="130" x2="240" y2="170" class="hangman-part hidden" id="rightArm"/>
+                        <line x1="200" y1="190" x2="170" y2="250" class="hangman-part hidden" id="leftLeg"/>
+                        <line x1="200" y1="190" x2="230" y2="250" class="hangman-part hidden" id="rightLeg"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- 4. Word Display Area -->
+            <div class="game-area-word">
+                <div id="wordDisplay" class="word-slots"></div>
+            </div>
+
+            <!-- 5. Hint Area -->
+            <div class="game-area-hint">
+                <button id="hintBtn" class="btn-hint">💡 Hint</button>
+                <div id="hintDisplay" class="hint-text"></div>
+            </div>
+
+            <!-- 6. Keyboard Area -->
+            <div class="game-area-keyboard">
+                <div id="keyboard" class="keyboard-grid"></div>
+            </div>
+
+            <!-- 7. Actions Area -->
+            <div class="game-area-actions">
+                <button id="restartBtn" class="btn-action restart">Restart</button>
+                <button id="skipBtn" class="btn-action skip">Skip</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Win/Lose Modal -->
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content game-over-content">
+            <div id="gameOverMessage"></div>
+            <div class="educational-info" id="educationalInfo"></div>
+            <div class="game-over-buttons">
+                <button class="btn btn-play" id="nextWordBtn">Next Word</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Complete Modal -->
+    <div id="gameCompleteModal" class="modal">
+        <div class="modal-content game-complete-content">
+            <h1 class="complete-title">🎮 Game Complete! 🎮</h1>
+            <div class="final-stats">
+                <div class="stat-item">
+                    <div class="stat-label">Total Score</div>
+                    <div class="stat-value" id="finalScore">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Words Solved</div>
+                    <div class="stat-value" id="wordsSolved">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Accuracy</div>
+                    <div class="stat-value" id="accuracy">0%</div>
+                </div>
+            </div>
+            <div id="performanceMessage"></div>
+            <div class="game-over-buttons">
+                <button class="btn btn-play" id="playNewGameBtn">Play Again</button>
+                <button class="btn btn-how" id="homeFromCompleteBtn">Home</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="bgMusic.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Analytics must load FIRST -->
+    <script src="js-analytics-bridge/analytics-bridge.js?v=levelwise-20260704"></script>
+    <script src="script.js?v=levelwise-20260704"></script>
+</body>
+</html>

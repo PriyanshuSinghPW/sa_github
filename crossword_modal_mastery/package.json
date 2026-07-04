@@ -1,0 +1,13 @@
+{
+  "name": "crossword-modal-mastery",
+  "version": "1.0.0",
+  "description": "Crossword Modal Mastery Game Build",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "rollup": "^3.0.0",
+    "rollup-plugin-copy": "^3.4.0"
+  }
+}

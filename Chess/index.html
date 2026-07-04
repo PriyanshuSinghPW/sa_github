@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess vs AI</title>
+    
+    <!-- CSS for Chessboard.js -->
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Home Screen -->
+    <div id="homeScreen" class="home-screen">
+        <div class="home-bg-wrapper">
+            <img src="img/chess_bg.jpg" alt="Chess Master Background" class="home-bg home-bg-mobile">
+            <img src="img/chess_bg.jpg" alt="Chess Master Background" class="home-bg home-bg-desktop">
+        </div>
+        <div class="home-content">
+            <div class="logo-button-group">
+                <img src="img/Chess_txt.png" alt="Chess Master Logo" class="game-logo">
+                <img src="img/Play_ButtonChess.png" alt="Play Button" id="playNowBtn" class="play-btn-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="gameScreen" class="container" style="display: none;">
+        <h1>♟️Chess Master </h1>
+        <div id="status">White to move</div>
+        <div class="game-area">
+            <div class="side-panel">
+                <h3>Captured</h3>
+                <div id="captured-white" class="captured-pieces"></div>
+                <div id="captured-black" class="captured-pieces"></div>
+            </div>
+            <div id="myBoard"></div>
+            <div class="side-panel">
+                <h3>Move History</h3>
+                <div id="move-history"></div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="homeBtn" style="background-color: #7f8c8d;">🏠 Home</button>
+            <button id="resetBtn">🔄 New Game</button>
+            <button id="flipBtn">🔃 Flip Board</button>
+            <button id="undoBtn">⬅️ Undo Move</button>
+        </div>
+        <div id="thinking" class="thinking" style="display: none;">🤔 AI is thinking...</div>
+    </div>
+
+    <!-- jQuery (Required for Chessboard.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    <!-- Chessboard.js -->
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+    
+    <!-- Chess.js (Logic) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+
+    <!-- Analytics Bridge -->
+    <script src="js-analytics-bridge/dist/analytics-bridge.js?v=2"></script>
+
+    <!-- Stockfish.js (AI) -->
+    <!-- Using a specific version that works well in browser without complex WASM setup for this demo -->
+    <script src="script.js?v=2"></script>
+</body>
+</html>

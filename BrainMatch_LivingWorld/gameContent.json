@@ -1,0 +1,43 @@
+{
+  "gameMode": "textToImage",
+  "content": {
+    "science": {
+      "level1": {
+        "pairs": [
+          { "a": "Mammal", "image": "images/11.png", "imageAlt": "An image of a mammal" },
+          { "a": "Bird", "image": "images/12.png", "imageAlt": "An image of a bird" },
+          { "a": "Amphibian", "image": "images/13.png", "imageAlt": "An image of an amphibian" },
+          { "a": "Aquatic Animal", "image": "images/14.png", "imageAlt": "An image of an aquatic animal" },
+          { "a": "Plant", "image": "images/15.png", "imageAlt": "An image of a plant" },
+          { "a": "Insect", "image": "images/16.png", "imageAlt": "An image of an insect" },
+          { "a": "Reptile", "image": "images/17.png", "imageAlt": "An image of a reptile" },
+          { "a": "marine", "image": "images/18.png", "imageAlt": "An image of a mammal" }
+        ]
+      },
+      "level2": {
+        "pairs": [
+          { "a": "Food", "image": "images/21.png", "imageAlt": "An image of food" },
+          { "a": "Grip", "image": "images/22.png", "imageAlt": "An image of grip" },
+          { "a": "Hold", "image": "images/23.png", "imageAlt": "An image of hold" },
+          { "a": "Seed", "image": "images/24.png", "imageAlt": "An image of a seed" },
+          { "a": "Grow", "image": "images/25.png", "imageAlt": "An image representing growth" },
+          { "a": "Air", "image": "images/26.png", "imageAlt": "An image representing air" },
+          { "a": "Color", "image": "images/27.png", "imageAlt": "An image of color" },
+          { "a": "Dust", "image": "images/28.png", "imageAlt": "An image of dust" }
+        ]
+      },
+      "level3": {
+        "pairs": [
+          { "a": "Desert", "image": "images/31.png", "imageAlt": "An image of a desert" },
+          { "a": "Polar", "image": "images/32.png", "imageAlt": "An image of a polar region" },
+          { "a": "Water", "image": "images/33.png", "imageAlt": "An image of water" },
+          { "a": "Forest", "image": "images/34.png", "imageAlt": "An image of a forest" },
+          { "a": "Arctic", "image": "images/35.png", "imageAlt": "An image of the arctic" },
+          { "a": "Grassland", "image": "images/36.png", "imageAlt": "An image of grassland" },
+          { "a": "Forest", "image": "images/37.png", "imageAlt": "An image of a forest" },
+          { "a": "Ocean", "image": "images/38.png", "imageAlt": "An image of an ocean" }
+        ]
+      }
+    }
+  }
+}

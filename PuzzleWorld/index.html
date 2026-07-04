@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Nebula Maze - Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg.mp3" type="audio/mpeg">
+    </audio>
+    
+    <button id="muteBtn" class="mute-btn" title="Toggle Music">🔊</button>
+    
+    <div class="game-container">
+        <div class="header">
+            <a href="home.html" class="btn" style="position: absolute; top: 20px; left: 20px; padding: 8px 15px; font-size: 0.9rem;">🏠 Home</a>
+            <h1>Nebula Maze</h1>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-label">Moves:</span>
+                    <span class="stat-value" id="move-count">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Collectibles:</span>
+                    <span class="stat-value" id="collectible-count">0/0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-wrapper">
+            <canvas id="game-canvas"></canvas>
+        </div>
+
+        <div class="controls">
+            <div class="level-selector" style="display: none;">
+                <label for="level-select">Level:</label>
+                <select id="level-select">
+                    <option value="1">Level 1</option>
+                    <option value="2">Level 2</option>
+                    <option value="3">Level 3</option>
+                    <option value="4">Level 4</option>
+                </select>
+            </div>
+            <button id="reset-btn" class="btn">🔄 Reset</button>
+        </div>
+
+        <!-- Mobile Touch Controls -->
+        <div class="mobile-controls" id="mobile-controls">
+            <div class="dpad">
+                <button class="dpad-btn up" data-key="w">▲</button>
+                <div class="dpad-middle">
+                    <button class="dpad-btn left" data-key="a">◄</button>
+                    <div class="dpad-center"></div>
+                    <button class="dpad-btn right" data-key="d">►</button>
+                </div>
+                <button class="dpad-btn down" data-key="s">▼</button>
+            </div>
+        </div>
+
+        <!-- Win Screen -->
+        <div class="win-screen" id="win-screen" style="display: none;">
+            <div class="win-content">
+                <h2>🎉 Level Complete!</h2>
+                <p class="win-moves">Completed in <span id="final-moves">0</span> moves</p>
+                <p class="win-score">XP: <span id="final-score">0</span> / 50</p>
+                <div class="win-buttons">
+                    <button id="next-level-btn" class="btn btn-primary">NEXT</button>
+                    <button id="replay-btn" class="btn">REPLAY</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Background Music
+        const bgMusic = document.getElementById('bgMusic');
+        const muteBtn = document.getElementById('muteBtn');
+        bgMusic.volume = 0.2; // Adjust this value between 0.0 (silent) and 1.0 (full volume)
+        
+        let isMuted = false;
+        
+        // Auto-play with user interaction
+        document.addEventListener('click', () => {
+            bgMusic.play().catch(e => console.log('Audio play failed:', e));
+        }, { once: true });
+        
+        // Mute/Unmute toggle
+        muteBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            isMuted = !isMuted;
+            bgMusic.muted = isMuted;
+            muteBtn.textContent = isMuted ? '🔇' : '🔊';
+        });
+    </script>
+    <!-- Analytics must load FIRST before game scripts -->
+    <script src="js-analytics-bridge/dist/analytics-bridge.js?v=2"></script>
+    <script src="pathfinder.js"></script>
+    <script src="game.js?v=4"></script>
+    <script src="background.js"></script>
+</body>
+</html>

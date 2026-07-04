@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "MESOPOTAMIA",
+      "category": "History",
+      "hint": "Ancient region between Tigris and Euphrates",
+      "educational": "Mesopotamia, meaning 'land between rivers,' is considered the cradle of civilization where writing, agriculture, and cities first developed around 3500 BCE."
+    },
+    {
+      "word": "ENLIGHTENMENT",
+      "category": "History",
+      "hint": "Intellectual movement emphasizing reason",
+      "educational": "The Enlightenment (17th-18th century) was an intellectual movement that emphasized reason, science, and individual rights, influencing modern democracy."
+    },
+    {
+      "word": "SUFFRAGE",
+      "category": "History",
+      "hint": "Right to vote in political elections",
+      "educational": "Suffrage movements fought for voting rights. Women's suffrage was achieved in various countries throughout the 19th and 20th centuries."
+    },
+    {
+      "word": "FEUDALISM",
+      "category": "History",
+      "hint": "Medieval social system based on land ownership",
+      "educational": "Feudalism was a hierarchical system in medieval Europe where lords granted land to vassals in exchange for military service and loyalty."
+    },
+    {
+      "word": "BUREAUCRACY",
+      "category": "History",
+      "hint": "Complex administrative system of government",
+      "educational": "Bureaucracy is a system of government administration marked by officials, red tape, and hierarchical organization, perfected in ancient China."
+    },
+    {
+      "word": "APARTHEID",
+      "category": "History",
+      "hint": "System of racial segregation in South Africa",
+      "educational": "Apartheid was South Africa's system of racial segregation (1948-1994). Nelson Mandela led the struggle against it, becoming the first black president."
+    },
+    {
+      "word": "NATIONALISM",
+      "category": "History",
+      "hint": "Identification with one nation and its interests",
+      "educational": "Nationalism is devotion to one's nation and its interests. It played a major role in forming modern nation-states and causing conflicts."
+    },
+    {
+      "word": "PROPAGANDA",
+      "category": "History",
+      "hint": "Information to promote political views",
+      "educational": "Propaganda is biased information used to promote a political cause. It was heavily used by totalitarian regimes in the 20th century."
+    },
+    {
+      "word": "CONTAINMENT",
+      "category": "History",
+      "hint": "Cold War strategy to prevent communism spread",
+      "educational": "Containment was the U.S. policy during the Cold War to prevent the spread of communism, leading to interventions in Korea, Vietnam, and elsewhere."
+    },
+    {
+      "word": "TOTALITARIAN",
+      "category": "History",
+      "hint": "Government with absolute control over citizens",
+      "educational": "Totalitarianism is a political system with complete state control over public and private life. Examples include Nazi Germany and Stalinist USSR."
+    }
+  ]
+}

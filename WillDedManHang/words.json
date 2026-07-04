@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "JAVASCRIPT",
+      "category": "Programming Language",
+      "hint": "A popular scripting language used for web development, runs in browsers",
+      "educational": "JavaScript is the language that makes websites interactive. It's one of the core technologies of the World Wide Web."
+    },
+    {
+      "word": "ALGORITHM",
+      "category": "Computer Science",
+      "hint": "Step-by-step procedure for solving a problem or completing a task",
+      "educational": "An algorithm is a finite sequence of instructions used to solve a problem. Examples include sorting algorithms, search algorithms, and machine learning algorithms."
+    },
+    {
+      "word": "DATABASE",
+      "category": "Data Storage",
+      "hint": "Organized collection of structured information stored electronically",
+      "educational": "Databases store and manage data efficiently. Popular types include SQL (like MySQL, PostgreSQL) and NoSQL (like MongoDB)."
+    },
+    {
+      "word": "FRAMEWORK",
+      "category": "Software Development",
+      "hint": "A platform providing foundation for developing software applications",
+      "educational": "Frameworks provide reusable code and structure for applications. Examples: React, Angular, Django, Spring Boot."
+    },
+    {
+      "word": "ENCRYPTION",
+      "category": "Cybersecurity",
+      "hint": "Process of converting information into secret code to prevent unauthorized access",
+      "educational": "Encryption protects sensitive data by converting it into unreadable format. Common methods: AES, RSA, SSL/TLS for secure communication."
+    },
+    {
+      "word": "NETWORK",
+      "category": "Computer Systems",
+      "hint": "Group of interconnected computers that can exchange data and share resources",
+      "educational": "Networks enable communication between devices. Types include LAN (Local), WAN (Wide), and the Internet (global network)."
+    },
+    {
+      "word": "VARIABLE",
+      "category": "Programming Concept",
+      "hint": "Named storage location in memory that holds a value which can change",
+      "educational": "Variables are fundamental in programming. They store data that can be used and modified during program execution."
+    },
+    {
+      "word": "COMPILER",
+      "category": "Software Tool",
+      "hint": "Program that translates code from high-level language to machine language",
+      "educational": "Compilers convert human-readable code into machine code. Examples: GCC for C/C++, javac for Java."
+    },
+    {
+      "word": "DEBUGGING",
+      "category": "Software Development",
+      "hint": "Process of finding and fixing errors or bugs in computer programs",
+      "educational": "Debugging is essential in programming. Tools include debuggers, logging, and testing frameworks to identify issues."
+    },
+    {
+      "word": "RECURSION",
+      "category": "Programming Technique",
+      "hint": "Function that calls itself to solve a problem by breaking it into smaller parts",
+      "educational": "Recursion solves problems by dividing them into smaller instances. Classic examples: factorial calculation, Fibonacci sequence, tree traversal."
+    }
+  ]
+}

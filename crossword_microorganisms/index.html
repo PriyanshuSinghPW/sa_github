@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔬 Invisible World Crossword Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #01201c;
+            --card-background: #01332e;
+            --text-color: #03dac6;
+            --accent-color: #03dac6;
+            --button-hover: rgba(3,218,198,0.18);
+            --overlay-bg: rgba(3,218,198,0.09);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: clamp(15px, 4vw, 30px);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background Animation */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .word-container {
+            position: absolute;
+            display: flex;
+            gap: 2px;
+        }
+
+        .word-container.horizontal {
+            flex-direction: row;
+        }
+
+        .word-container.vertical {
+            flex-direction: column;
+        }
+
+        .letter-box {
+            width: 35px;
+            height: 35px;
+            border: 1px solid rgba(57, 255, 20, 0.2);
+            background-color: rgba(57, 255, 20, 0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: bold;
+            color: rgba(57, 255, 20, 0.4);
+            font-size: 1.1em;
+            opacity: 0;
+            animation: letterAppear 0.375s ease-in forwards;
+        }
+
+        @keyframes letterAppear {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 0.75;
+                transform: scale(1);
+            }
+        }
+
+        .word-container.fade-out .letter-box {
+            animation: letterDisappear 0.375s ease-out forwards;
+        }
+
+        @keyframes letterDisappear {
+            0% {
+                opacity: 0.75;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: min(92vw, 480px);
+            text-align: center;
+            animation: fadeIn 0.8s ease-in;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .title-container {
+            margin-bottom: clamp(30px, 6vh, 55px);
+            padding: 10px 20px;
+        }
+
+        .game-eyebrow {
+            font-size: clamp(0.65em, 2vw, 0.78em);
+            color: rgba(3,218,198,0.55);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .game-title-text {
+            font-size: clamp(1.8em, 8vw, 3.2em);
+            font-weight: 700;
+            color: var(--accent-color);
+            letter-spacing: clamp(2px, 1vw, 5px);
+            text-transform: uppercase;
+            line-height: 1.1;
+            display: block;
+        }
+
+        .game-subtitle {
+            font-size: clamp(0.7em, 2.5vw, 0.95em);
+            color: rgba(3,218,198,0.45);
+            letter-spacing: clamp(2px, 1vw, 4px);
+            text-transform: uppercase;
+            margin-top: 8px;
+        }
+
+        .game-title-img {
+            display: none;
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(12px, 3vw, 20px);
+            padding: 0 clamp(10px, 4vw, 20px);
+        }
+
+        .btn {
+            padding: clamp(13px, 2.5vh, 18px) clamp(24px, 6vw, 40px);
+            font-size: clamp(0.9em, 3vw, 1.15em);
+            font-family: 'Roboto Mono', monospace;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            letter-spacing: clamp(1px, 0.5vw, 2px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(3,218,198,0.12);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .play-btn {
+            background-color: var(--accent-color);
+            color: #01201c;
+            box-shadow: none;
+        }
+
+        .play-btn:hover {
+            background-color: var(--button-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 18px rgba(0,0,0,0.5);
+        }
+
+        .play-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .how-to-btn {
+            background-color: transparent;
+            color: var(--accent-color);
+            border: 1px solid rgba(3,218,198,0.45);
+        }
+
+        .how-to-btn:hover {
+            background-color: rgba(57, 255, 20, 0.08);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+        }
+
+        /* Popup Overlay */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .popup-overlay.active {
+            display: flex;
+        }
+
+        .popup-content {
+            background-color: transparent;
+            border-radius: 12px;
+            padding: 0;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow: hidden;
+            position: relative;
+            animation: slideUp 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close-btn {
+            display: none;
+        }
+
+        /* How to Play Content Styles */
+        .how-to-play-content {
+            background: linear-gradient(135deg, #01332e 0%, #01443c 100%);
+            border-radius: 16px;
+            padding: clamp(20px, 4vw, 40px);
+            max-width: 680px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+            border: 1px solid rgba(3,218,198,0.2);
+            background-color: rgba(3,218,198,0.05);
+            color: rgba(3,218,198,0.4);
+        .how-to-title {
+            font-size: clamp(1.6em, 5vw, 2.4em);
+            text-align: center;
+            margin-bottom: clamp(20px, 4vh, 40px);
+            color: var(--text-color);
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .title-letter {
+            display: inline-block;
+            border: 1px solid rgba(3,218,198,0.5);
+            padding: 4px 12px;
+            margin: 0 3px;
+            background-color: rgba(57, 255, 20, 0.08);
+            border-radius: 5px;
+            color: var(--accent-color);
+        }
+
+        .title-letter sub {
+            font-size: 0.5em;
+            color: var(--accent-color);
+            vertical-align: sub;
+        }
+
+        .instruction-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: clamp(18px, 3vh, 35px);
+            padding: clamp(12px, 2vw, 20px);
+            background-color: rgba(3,218,198,0.04);
+            border-radius: 12px;
+            border-left: 3px solid rgba(3,218,198,0.35);
+        }
+
+        .instruction-number {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: var(--accent-color);
+            background-color: rgba(57, 255, 20, 0.08);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            flex-shrink: 0;
+            border: 1px solid rgba(57, 255, 20, 0.35);
+        }
+
+        .instruction-text {
+            flex: 1;
+            color: var(--text-color);
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .instruction-text strong {
+            color: var(--accent-color);
+        }
+
+        .instruction-visual {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .mini-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 50px);
+            grid-template-rows: repeat(3, 50px);
+            gap: 3px;
+            margin: 10px 0;
+        }
+
+        .mini-cell {
+            width: 50px;
+            height: 50px;
+                border: 1px solid rgba(3,218,198,0.3);
+            background-color: rgba(57, 255, 20, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--text-color);
+            border-radius: 4px;
+        }
+
+        .mini-cell.filled {
+            background-color: rgba(3,218,198,0.12);
+            border-color: rgba(3,218,198,0.7);
+            color: var(--accent-color);
+        }
+
+        .check-demo-btn {
+            padding: 13px 36px;
+            font-size: 1em;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: bold;
+            background-color: var(--accent-color);
+            color: #040804;
+            border: none;
+            border-radius: 8px;
+            cursor: default;
+            letter-spacing: 2px;
+        }
+
+        .back-btn {
+            margin-top: 16px;
+            padding: clamp(11px, 2vh, 15px) clamp(30px, 6vw, 50px);
+            font-size: clamp(0.85em, 2.5vw, 1.05em);
+            font-family: 'Roboto Mono', monospace;
+            font-weight: bold;
+            text-transform: uppercase;
+            background-color: var(--accent-color);
+            color: #040804;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            letter-spacing: 2px;
+        }
+
+        .back-btn:hover {
+            background-color: var(--button-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+        }
+
+        .popup-title {
+            color: var(--accent-color);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: none;
+        }
+
+        .instructions-text {
+            text-align: left;
+            line-height: 1.8;
+            color: var(--text-color);
+            display: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 480px) {
+            .popup-content { max-width: 96%; }
+            .how-to-play-content { border-radius: 12px; }
+            .how-to-title { letter-spacing: 1px; }
+            .title-letter { padding: 2px 8px; margin: 0 1px; }
+            .instruction-item { flex-direction: column; }
+            .instruction-number { margin-right: 0; margin-bottom: 10px; }
+            .mini-grid {
+                grid-template-columns: repeat(4, 36px);
+                grid-template-rows: repeat(3, 36px);
+            }
+            .mini-cell { width: 36px; height: 36px; font-size: 0.9em; }
+        }
+
+        /* Music Control Button */
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            background-color: rgba(1,32,28,0.92);
+            border: 1px solid rgba(3,218,198,0.28);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            transition: all 0.2s ease;
+            z-index: 100;
+            backdrop-filter: blur(4px);
+            box-shadow: none;
+        }
+
+        .music-control:hover {
+            transform: scale(1.08);
+            border-color: rgba(3,218,198,0.55);
+        }
+
+        .music-control.muted {
+            background-color: rgba(1,32,28,0.7);
+            border-color: rgba(3,218,198,0.3);
+            color: rgba(3,218,198,0.28);
+        }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation" id="bgAnimation"></div>
+
+    <div class="main-container">
+        <div class="title-container">
+            <p class="game-eyebrow">🔬 Class 8 Science</p>
+            <h1 class="game-title-text" id="gameTitleText">Invisible World</h1>
+            <p class="game-subtitle">Crossword Challenge</p>
+        </div>
+
+        <div class="buttons-container">
+            <button class="btn play-btn" id="playBtn">
+                <span>Play Game</span>
+            </button>
+            <button class="btn how-to-btn" id="howToBtn">
+                <span>How to Play</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- How to Play Popup -->
+    <div class="popup-overlay" id="howToPopup">
+        <div class="popup-content">
+            <div class="how-to-play-content">
+                <h2 class="how-to-title"><span class="title-letter">H</span>ow <span class="title-letter">T</span>o <span class="title-letter">P<sub>La</sub></span>y</h2>
+                
+                <div class="instruction-item">
+                    <div class="instruction-number">1</div>
+                    <div class="instruction-text">
+                        <strong>Type in the microorganism themed crossword puzzle</strong>
+                    </div>
+                    <div class="instruction-visual">
+                        <div class="mini-grid">
+                            <div class="mini-cell"></div>
+                            <div class="mini-cell filled">A</div>
+                            <div class="mini-cell"></div>
+                            <div class="mini-cell"></div>
+                            <div class="mini-cell filled">M</div>
+                            <div class="mini-cell filled">O</div>
+                            <div class="mini-cell filled">L</div>
+                            <div class="mini-cell filled">E</div>
+                            <div class="mini-cell"></div>
+                            <div class="mini-cell filled">M</div>
+                            <div class="mini-cell"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instruction-item">
+                    <div class="instruction-number">2</div>
+                    <div class="instruction-text">
+                        <strong>Click 'CHECK' to verify your answer</strong>
+                    </div>
+                    <div class="instruction-visual">
+                        <button class="check-demo-btn">CHECK</button>
+                    </div>
+                </div>
+            </div>
+            <button class="back-btn" id="backBtn">BACK</button>
+        </div>
+    </div>
+
+    <!-- Music Control Button -->
+    <button class="music-control" id="musicControl" title="Toggle Music">
+        🔊
+    </button>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const playBtn = document.getElementById('playBtn');
+        const howToBtn = document.getElementById('howToBtn');
+        const howToPopup = document.getElementById('howToPopup');
+        const backBtn = document.getElementById('backBtn');
+        const gameTitleImg = document.getElementById('gameTitleImg');
+        const gameTitleText = document.getElementById('gameTitleText');
+        const bgAnimation = document.getElementById('bgAnimation');
+        const bgMusic = document.getElementById('bgMusic');
+        const musicControl = document.getElementById('musicControl');
+
+        // Set music volume to 50%
+        bgMusic.volume = 0.5;
+
+        // Music control
+        let isMusicPlaying = false;
+
+        // Try to autoplay music immediately
+        bgMusic.play().then(() => {
+            isMusicPlaying = true;
+            musicControl.textContent = '🔊';
+            musicControl.classList.remove('muted');
+        }).catch(e => {
+            // Autoplay blocked by browser, wait for user interaction
+            console.log('Autoplay blocked, waiting for user interaction');
+            musicControl.classList.add('muted');
+            musicControl.textContent = '🔇';
+            
+            // Try to play on first user interaction
+            document.addEventListener('click', function autoplayMusic() {
+                if (!isMusicPlaying) {
+                    bgMusic.play().then(() => {
+                        isMusicPlaying = true;
+                        musicControl.textContent = '🔊';
+                        musicControl.classList.remove('muted');
+                    }).catch(e => console.log('Music play failed:', e));
+                }
+                document.removeEventListener('click', autoplayMusic);
+            }, { once: true });
+        });
+
+        musicControl.addEventListener('click', function() {
+            if (isMusicPlaying) {
+                bgMusic.pause();
+                musicControl.textContent = '🔇';
+                musicControl.classList.add('muted');
+                isMusicPlaying = false;
+            } else {
+                bgMusic.play().catch(e => console.log('Music play failed:', e));
+                musicControl.textContent = '🔊';
+                musicControl.classList.remove('muted');
+                isMusicPlaying = true;
+            }
+        });
+
+        // Words related to microorganisms and biology
+        const words = [
+            'CELL', 'VIRUS', 'FUNGI', 'ALGAE', 'YEAST', 'SPORE',
+            'BACTERIA', 'NUCLEUS', 'TISSUE', 'ORGAN', 'MICROBE',
+            'PROTOZOA', 'AMOEBA', 'FLAGELLA', 'ENZYME', 'PROTEIN',
+            'MEMBRANE', 'CHLOROPHYLL', 'CYTOPLASM', 'RHIZOBIUM',
+            'DECOMPOSE', 'FERMENT', 'PATHOGEN', 'PARASITE', 'VACCINE',
+            'UNICELLULAR', 'MULTICELLULAR', 'ORGANISM', 'LACTOBACILLUS'
+        ];
+
+        const activeWords = [];
+        const maxWords = window.innerWidth < 600 ? 8 : 15;
+
+        // Define exclusion zones (center of screen where buttons/title are)
+        function isInExclusionZone(x, y, width, height) {
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            
+            // Define exclusion zone dimensions
+            const exclusionWidth = window.innerWidth < 600 ? 350 : 550;
+            const exclusionHeight = window.innerHeight < 600 ? 400 : 500;
+            
+            const exclusionLeft = centerX - exclusionWidth / 2;
+            const exclusionRight = centerX + exclusionWidth / 2;
+            const exclusionTop = centerY - exclusionHeight / 2;
+            const exclusionBottom = centerY + exclusionHeight / 2;
+            
+            // Check if word overlaps with exclusion zone
+            return !(x + width < exclusionLeft || 
+                     x > exclusionRight || 
+                     y + height < exclusionTop || 
+                     y > exclusionBottom);
+        }
+
+        // Check if word overlaps with existing words
+        function overlapsWithExisting(x, y, width, height) {
+            const padding = 20; // Space between words
+            
+            for (let word of activeWords) {
+                const rect = word.getBoundingClientRect();
+                const wordX = parseFloat(word.style.left);
+                const wordY = parseFloat(word.style.top);
+                const wordWidth = rect.width;
+                const wordHeight = rect.height;
+                
+                if (!(x + width + padding < wordX || 
+                      x > wordX + wordWidth + padding || 
+                      y + height + padding < wordY || 
+                      y > wordY + wordHeight + padding)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function getRandomPosition(wordLength, direction) {
+            const margin = 50;
+            const boxSize = 37; // 35px + 2px gap
+            const width = direction === 'horizontal' ? wordLength * boxSize : boxSize;
+            const height = direction === 'vertical' ? wordLength * boxSize : boxSize;
+            
+            let attempts = 0;
+            const maxAttempts = 50;
+            
+            while (attempts < maxAttempts) {
+                const x = Math.random() * (window.innerWidth - width - margin * 2) + margin;
+                const y = Math.random() * (window.innerHeight - height - margin * 2) + margin;
+                
+                if (!isInExclusionZone(x, y, width, height) && 
+                    !overlapsWithExisting(x, y, width, height)) {
+                    return { x, y };
+                }
+                attempts++;
+            }
+            
+            return null; // No valid position found
+        }
+
+        function createWord() {
+            if (activeWords.length >= maxWords) return;
+
+            const word = words[Math.floor(Math.random() * words.length)];
+            const direction = Math.random() > 0.5 ? 'horizontal' : 'vertical';
+            const position = getRandomPosition(word.length, direction);
+            
+            if (!position) return; // Skip if no valid position
+
+            const wordContainer = document.createElement('div');
+            wordContainer.className = `word-container ${direction}`;
+            wordContainer.style.left = position.x + 'px';
+            wordContainer.style.top = position.y + 'px';
+
+            // Create boxes for each letter with staggered animation (25% slower)
+            word.split('').forEach((letter, index) => {
+                const box = document.createElement('div');
+                box.className = 'letter-box';
+                box.textContent = letter;
+                box.style.animationDelay = (index * 0.125) + 's'; // 0.1 * 1.25
+                wordContainer.appendChild(box);
+            });
+
+            bgAnimation.appendChild(wordContainer);
+            activeWords.push(wordContainer);
+
+            // Remove word after random duration (3.75-8.75 seconds, 25% slower)
+            const lifetime = Math.random() * 5000 + 3750;
+            setTimeout(() => {
+                removeWord(wordContainer);
+            }, lifetime);
+        }
+
+        function removeWord(wordContainer) {
+            wordContainer.classList.add('fade-out');
+            
+            setTimeout(() => {
+                if (wordContainer.parentNode) {
+                    wordContainer.remove();
+                }
+                const index = activeWords.indexOf(wordContainer);
+                if (index > -1) {
+                    activeWords.splice(index, 1);
+                }
+            }, 625); // 500 * 1.25
+        }
+
+        // Continuously create new words
+        function startWordAnimation() {
+            createWord();
+            
+            const interval = setInterval(() => {
+                if (activeWords.length < maxWords) {
+                    createWord();
+                }
+            }, 1000); // 800 * 1.25
+        }
+
+        // Start the animation
+        startWordAnimation();
+
+        // Check if game title image exists
+        // (title is now text-based, no image needed)
+
+        // Play button - redirects to game
+        playBtn.addEventListener('click', function() {
+            sessionStorage.setItem('musicPlaying', isMusicPlaying ? '1' : '0');
+            window.location.href = `game.html?playReload=${Date.now()}`;
+        });
+
+        // How to Play button
+        howToBtn.addEventListener('click', function() {
+            howToPopup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close popup
+        backBtn.addEventListener('click', closePopup);
+
+        // Close popup when clicking outside
+        howToPopup.addEventListener('click', function(e) {
+            if (e.target === howToPopup) {
+                closePopup();
+            }
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && howToPopup.classList.contains('active')) {
+                closePopup();
+            }
+        });
+
+        function closePopup() {
+            howToPopup.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>

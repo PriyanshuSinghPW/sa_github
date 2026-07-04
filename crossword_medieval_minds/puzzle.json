@@ -1,0 +1,27 @@
+﻿{
+  "metadata": {
+    "title": "Medieval Minds",
+    "author": "Physics Wallah",
+    "level": 1,
+    "difficulty": "Court Scholar",
+    "size": { "rows": 18, "cols": 18 },
+    "bonusXP": 20,
+    "maxXP": 100
+  },
+  "clues": {
+    "across": [
+      { "number": 9,  "clue": "System where nobles maintained troops in exchange for land", "answer": "MANSABDARI",   "direction": "across", "row": 5,  "col": 0, "hint": "The Mughal military-administrative system ranking nobles and their responsibilities." },
+      { "number": 1,  "clue": "Epic poem written by Krishnadevaraya in Telugu",             "answer": "AMUKTAMALYADA","direction": "across", "row": 0,  "col": 0, "hint": "A classical Telugu literary masterpiece by the Vijayanagara emperor." },
+      { "number": 7,  "clue": "Battle in 1565 that destroyed the Vijayanagara city",        "answer": "TALIKOTA",     "direction": "across", "row": 2,  "col": 5, "hint": "This decisive battle marked the end of the great Vijayanagara Empire." },
+      { "number": 14, "clue": "Rajput warrior queen of the Garha kingdom",                  "answer": "DURGAVATI",    "direction": "across", "row": 11, "col": 0, "hint": "A brave queen who fought against Mughal forces to protect her kingdom." },
+      { "number": 16, "clue": "Akbar's doctrine meaning 'peace with all'",                  "answer": "SULHIKUL",     "direction": "across", "row": 14, "col": 0, "hint": "Emperor Akbar's policy of religious tolerance and universal peace." }
+    ],
+    "down": [
+      { "number": 10, "clue": "Financial instrument functioning like early banking",         "answer": "HUNDI",        "direction": "down",   "row": 3,  "col": 2, "hint": "A traditional credit instrument used by merchants for transferring money." },
+      { "number": 4,  "clue": "Tax imposed on non-Muslims under the Sultanate",             "answer": "JIZYA",        "direction": "down",   "row": 1,  "col": 4, "hint": "A religious tax levied on non-Muslim subjects in medieval Islamic kingdoms." },
+      { "number": 3,  "clue": "Turkic-Mongol conqueror who devastated Delhi in 1398",       "answer": "TIMUR",        "direction": "down",   "row": 1,  "col": 8, "hint": "This fierce Central Asian ruler brought destruction to Delhi in the late 14th century." },
+      { "number": 13, "clue": "Capital of Vijayanagara Empire",                             "answer": "HAMPI",        "direction": "down",   "row": 4,  "col": 1, "hint": "The magnificent ruins of this city showcase the grandeur of Vijayanagara." },
+      { "number": 6,  "clue": "Destruction of religious images",                             "answer": "ICONOCLASM",   "direction": "down",   "row": 5,  "col": 9, "hint": "The act of breaking or destroying religious symbols and images." }
+    ]
+  }
+}

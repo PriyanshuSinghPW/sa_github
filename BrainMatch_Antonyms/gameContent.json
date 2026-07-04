@@ -1,0 +1,43 @@
+{
+  "gameMode": "textToText",
+  "content": {
+    "science": {
+      "level1": {
+        "pairs": [
+          { "a": "Hot", "b": "Cold" },
+          { "a": "Big", "b": "Small" },
+          { "a": "Happy", "b": "Sad" },
+          { "a": "Fast", "b": "Slow" },
+          { "a": "Up", "b": "Down" },
+          { "a": "Light", "b": "Dark" },
+          { "a": "Near", "b": "Far" },
+          { "a": "Strong", "b": "Weak" }
+        ]
+      },
+      "level2": {
+        "pairs": [
+          { "a": "Victory", "b": "Defeat" },
+          { "a": "Create", "b": "Destroy" },
+          { "a": "Kind", "b": "Mean" },
+          { "a": "Join", "b": "Split" },
+          { "a": "Major", "b": "Minor" },
+          { "a": "Accept", "b": "Reject" },
+          { "a": "Sweet", "b": "Sour" },
+          { "a": "Success", "b": "Failure" }
+        ]
+      },
+      "level3": {
+        "pairs": [
+          { "a": "Ample", "b": "Rare" },
+          { "a": "Good", "b": "Evil" },
+          { "a": "Rigid", "b": "Flexible" },
+          { "a": "Soft", "b": "Firm" },
+          { "a": "Acid", "b": "Base" },
+          { "a": "Advance", "b": "Retreat" },
+          { "a": "Rich", "b": "Poor" },
+          { "a": "Real", "b": "Fake" }
+        ]
+      }
+    }
+  }
+}

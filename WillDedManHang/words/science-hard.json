@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "THERMODYNAMICS",
+      "category": "Science",
+      "hint": "Study of heat energy and temperature relationships",
+      "educational": "Thermodynamics is the branch of physics dealing with heat, work, and energy. It's governed by four fundamental laws describing energy transfer."
+    },
+    {
+      "word": "MITOCHONDRIA",
+      "category": "Science",
+      "hint": "Powerhouse organelle of the cell",
+      "educational": "Mitochondria are organelles that produce ATP through cellular respiration, providing energy for cellular processes. They have their own DNA."
+    },
+    {
+      "word": "QUANTUM",
+      "category": "Science",
+      "hint": "Discrete unit of energy in physics",
+      "educational": "Quantum refers to the smallest discrete unit of any physical property. Quantum mechanics describes the behavior of matter at atomic scales."
+    },
+    {
+      "word": "ENTROPY",
+      "category": "Science",
+      "hint": "Measure of disorder in a system",
+      "educational": "Entropy is a measure of randomness or disorder in a system. The second law of thermodynamics states that entropy in isolated systems always increases."
+    },
+    {
+      "word": "ELECTROMAGNETIC",
+      "category": "Science",
+      "hint": "Related to electric and magnetic fields together",
+      "educational": "Electromagnetic phenomena involve both electric and magnetic fields. Light is electromagnetic radiation, and this force is one of four fundamental forces."
+    },
+    {
+      "word": "METABOLISM",
+      "category": "Science",
+      "hint": "Chemical processes maintaining life in organisms",
+      "educational": "Metabolism encompasses all chemical reactions in living organisms that convert food to energy, build and repair tissues, and eliminate waste."
+    },
+    {
+      "word": "RELATIVITY",
+      "category": "Science",
+      "hint": "Einstein theory about space time and gravity",
+      "educational": "Einstein's theory of relativity describes the relationship between space and time, showing that massive objects curve spacetime, creating gravity."
+    },
+    {
+      "word": "BIODIVERSITY",
+      "category": "Science",
+      "hint": "Variety of life forms in an environment",
+      "educational": "Biodiversity refers to the variety of living organisms in an ecosystem. High biodiversity indicates a healthy, resilient environment."
+    },
+    {
+      "word": "ANTIBIOTIC",
+      "category": "Science",
+      "hint": "Medicine that kills or stops bacteria growth",
+      "educational": "Antibiotics are medicines that fight bacterial infections by killing bacteria or preventing their reproduction. They don't work against viruses."
+    },
+    {
+      "word": "OXIDATION",
+      "category": "Science",
+      "hint": "Chemical reaction involving loss of electrons",
+      "educational": "Oxidation is a chemical reaction where a substance loses electrons. It often involves oxygen and is paired with reduction in redox reactions."
+    }
+  ]
+}

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play - Crossword Periodic Elements</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #121212;
+            --card-background: #1d1d1d;
+            --text-color: #e0e0e0;
+            --accent-color: #03dac6;
+            --button-hover: #02b8a8;
+            --border-color: #444;
+            --highlight-color: rgba(3, 218, 198, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Title Section with Periodic Elements */
+        .title-section {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 20px;
+        }
+
+        .main-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .element-box {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            border: 3px solid var(--accent-color);
+            background-color: rgba(3, 218, 198, 0.1);
+            padding: 8px;
+            position: relative;
+            box-shadow: 0 0 15px rgba(3, 218, 198, 0.3);
+        }
+
+        .element-number {
+            position: absolute;
+            top: 4px;
+            left: 6px;
+            font-size: 0.7em;
+            color: var(--accent-color);
+        }
+
+        .element-symbol {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .element-name {
+            font-size: 0.5em;
+            color: rgba(224, 224, 224, 0.7);
+            text-transform: capitalize;
+        }
+
+        .title-text {
+            font-size: 3em;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 0 0 20px rgba(3, 218, 198, 0.5);
+        }
+
+        /* Instructions Section */
+        .instructions {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        .instruction-item {
+            background-color: var(--card-background);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .instruction-item:hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 20px rgba(3, 218, 198, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-color);
+            color: var(--background-color);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .instruction-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .instruction-text {
+            font-size: 1.3em;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Example Grid */
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            grid-template-rows: repeat(3, 60px);
+            gap: 2px;
+            justify-content: center;
+            margin: 20px auto;
+        }
+
+        .example-cell {
+            background-color: #2a2a2a;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--accent-color);
+            position: relative;
+        }
+
+        .example-cell.empty {
+            background-color: var(--background-color);
+        }
+
+        .example-cell-number {
+            position: absolute;
+            top: 2px;
+            left: 4px;
+            font-size: 0.4em;
+            color: var(--text-color);
+        }
+
+        /* Check Button Example */
+        .check-button-example {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .check-btn-demo {
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: bold;
+            background-color: var(--accent-color);
+            color: var(--background-color);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 15px rgba(3, 218, 198, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .check-btn-demo:hover {
+            background-color: var(--button-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(3, 218, 198, 0.6);
+        }
+
+        /* Back Button */
+        .back-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            padding: 18px 50px;
+            font-size: 1.2em;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: bold;
+            text-transform: uppercase;
+            background-color: var(--accent-color);
+            color: var(--background-color);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(3, 218, 198, 0.4);
+        }
+
+        .back-btn:hover {
+            background-color: var(--button-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(3, 218, 198, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .title-text {
+                font-size: 2em;
+                letter-spacing: 2px;
+            }
+
+            .element-box {
+                width: 60px;
+                height: 60px;
+            }
+
+            .element-symbol {
+                font-size: 1.8em;
+            }
+
+            .instruction-item {
+                padding: 20px;
+            }
+
+            .instruction-text {
+                font-size: 1.1em;
+            }
+
+            .example-grid {
+                grid-template-columns: repeat(4, 50px);
+                grid-template-rows: repeat(3, 50px);
+            }
+
+            .example-cell {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title-text {
+                font-size: 1.5em;
+                letter-spacing: 1px;
+            }
+
+            .element-box {
+                width: 50px;
+                height: 50px;
+            }
+
+            .element-symbol {
+                font-size: 1.5em;
+            }
+
+            .element-number {
+                font-size: 0.6em;
+            }
+
+            .instruction-text {
+                font-size: 1em;
+            }
+
+            .example-grid {
+                grid-template-columns: repeat(4, 40px);
+                grid-template-rows: repeat(3, 40px);
+            }
+
+            .example-cell {
+                font-size: 1em;
+            }
+
+            .check-btn-demo {
+                padding: 12px 30px;
+                font-size: 1em;
+            }
+
+            .back-btn {
+                padding: 15px 40px;
+                font-size: 1em;
+            }
+        }
+
+        /* Landscape Mode Adjustments */
+        @media (orientation: landscape) and (max-height: 600px) {
+            .title-section {
+                margin-bottom: 30px;
+            }
+
+            .instructions {
+                gap: 30px;
+            }
+
+            .instruction-item {
+                padding: 20px;
+            }
+
+            .example-grid {
+                margin: 10px auto;
+            }
+
+            .back-button-container {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Title Section -->
+        <div class="title-section">
+            <div class="main-title">
+                <!-- H Element Box -->
+                <div class="element-box">
+                    <span class="element-number">1</span>
+                    <span class="element-symbol">H</span>
+                    <span class="element-name">Hydrogen</span>
+                </div>
+
+                <!-- Title Text -->
+                <span class="title-text">OW TO P</span>
+
+                <!-- La Element Box -->
+                <div class="element-box">
+                    <span class="element-number">57</span>
+                    <span class="element-symbol">La</span>
+                    <span class="element-name">Lanthanum</span>
+                </div>
+
+                <!-- Final Y -->
+                <span class="title-text">Y</span>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <!-- Step 1 -->
+            <div class="instruction-item">
+                <span class="step-number">1</span>
+                <div class="instruction-content">
+                    <div class="instruction-text">
+                        Type in the chemistry themed crossword puzzle
+                    </div>
+                    <!-- Example Grid -->
+                    <div class="example-grid">
+                        <!-- Row 1 -->
+                        <div class="example-cell empty"></div>
+                        <div class="example-cell">
+                            <span class="example-cell-number">1</span>
+                            A
+                        </div>
+                        <div class="example-cell empty"></div>
+                        <div class="example-cell empty"></div>
+                        
+                        <!-- Row 2 -->
+                        <div class="example-cell">
+                            <span class="example-cell-number">2</span>
+                            M
+                        </div>
+                        <div class="example-cell">O</div>
+                        <div class="example-cell">L</div>
+                        <div class="example-cell">E</div>
+                        
+                        <!-- Row 3 -->
+                        <div class="example-cell empty"></div>
+                        <div class="example-cell">M</div>
+                        <div class="example-cell empty"></div>
+                        <div class="example-cell empty"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="instruction-item">
+                <span class="step-number">2</span>
+                <div class="instruction-content">
+                    <div class="instruction-text">
+                        Click 'CHECK' to verify your answer
+                    </div>
+                    <!-- Check Button Example -->
+                    <div class="check-button-example">
+                        <button class="check-btn-demo">CHECK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <div class="back-button-container">
+            <button class="back-btn" id="backBtn">BACK TO MENU</button>
+        </div>
+    </div>
+
+    <script>
+        const backBtn = document.getElementById('backBtn');
+        
+        // Navigate back to main menu
+        backBtn.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+
+        // Also allow Escape key to go back
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

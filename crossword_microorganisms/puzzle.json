@@ -1,0 +1,26 @@
+﻿{
+  "metadata": {
+    "title": "Microscopic Basics",
+    "author": "Physics Wallah",
+    "level": 1,
+    "difficulty": "Starter",
+    "size": { "rows": 15, "cols": 15 },
+    "bonusXP": 20
+  },
+  "clues": {
+    "across": [
+      { "number": 1, "clue": "The basic unit of all living things",                                      "answer": "CELL",         "direction": "across", "row": 0,  "col": 0, "hint": "Every living organism is made of this tiny unit." },
+      { "number": 5, "clue": "The jelly-like substance filling a cell",                                  "answer": "CYTOPLASM",    "direction": "across", "row": 2,  "col": 5, "hint": "Think of it as the filling inside the cell membrane." },
+      { "number": 3, "clue": "Cell organisation level between tissue and organ system",                  "answer": "ORGAN",        "direction": "across", "row": 4,  "col": 2, "hint": "Your heart and lungs are examples of this level of organisation." },
+      { "number": 7, "clue": "A type of microorganism that includes mushrooms and moulds",              "answer": "FUNGI",        "direction": "across", "row": 8,  "col": 0, "hint": "This kingdom includes yeast, moulds and mushrooms." },
+      { "number": 9, "clue": "Microbes that help convert atmospheric nitrogen into usable form",        "answer": "RHIZOBIUM",    "direction": "across", "row": 11, "col": 4, "hint": "Found in root nodules of legumes, this microbe fixes nitrogen from air." }
+    ],
+    "down": [
+      { "number": 1, "clue": "An instrument used to observe objects invisible to the naked eye",        "answer": "MICROSCOPE",   "direction": "down",   "row": 0,  "col": 0, "hint": "Anton van Leeuwenhoek used this to first observe microbes." },
+      { "number": 2, "clue": "Organisms made of a single cell (e.g. Amoeba)",                          "answer": "UNICELLULAR",  "direction": "down",   "row": 0,  "col": 3, "hint": "Amoeba and Paramecium live their whole life as just ONE of these." },
+      { "number": 4, "clue": "Microorganism used to make curd and yoghurt",                            "answer": "LACTOBACILLUS","direction": "down",   "row": 1,  "col": 7, "hint": "Leave milk warm overnight with this microbe — you get curd!" },
+      { "number": 6, "clue": "A plant cell has this rigid outer layer that animal cells lack",          "answer": "CELLWALL",     "direction": "down",   "row": 5,  "col": 5, "hint": "Plants need this for structural support; animals do not have it." },
+      { "number": 8, "clue": "The process by which microbes break down dead matter",                    "answer": "DECOMPOSE",    "direction": "down",   "row": 0,  "col": 1, "hint": "Without this natural recycling process, dead organisms would pile up." }
+    ]
+  }
+}

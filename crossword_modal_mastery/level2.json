@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "title": "Medieval Minds",
+    "level": 2,
+    "author": "Physics Wallah",
+    "size": { "rows": 18, "cols": 18 },
+    "maxXP": 100,
+    "bonusXP": 20,
+    "timeLimit": 480
+  },
+  "clues": {
+    "across": [
+      { "number": 9,  "clue": "System where nobles maintained troops in exchange for land", "answer": "MANSABDARI",     "direction": "across", "row": 5,  "col": 0, "hint": "The Mughal military-administrative system ranking nobles and their responsibilities." },
+      { "number": 7,  "clue": "Battle in 1565 that destroyed the Vijayanagara city",        "answer": "TALIKOTA",       "direction": "across", "row": 0,  "col": 0, "hint": "This decisive battle marked the end of the great Vijayanagara Empire." },
+      { "number": 1,  "clue": "Epic poem written by Krishnadevaraya in Telugu",             "answer": "AMUKTAMALYADA",  "direction": "across", "row": 2,  "col": 0, "hint": "A classical Telugu literary masterpiece by the Vijayanagara emperor." },
+      { "number": 12, "clue": "Ahom commander who defeated Mughals at Saraighat",           "answer": "LACHITBORPHUKAN","direction": "across", "row": 8,  "col": 0, "hint": "This brilliant Ahom general led the defense against Mughal invasion in Assam." },
+      { "number": 14, "clue": "Rajput warrior queen of the Garha kingdom",                  "answer": "DURGAVATI",      "direction": "across", "row": 11, "col": 0, "hint": "A brave queen who fought against Mughal forces to protect her kingdom." },
+      { "number": 16, "clue": "Akbar's doctrine meaning 'peace with all'",                  "answer": "SULHIKUL",       "direction": "across", "row": 14, "col": 0, "hint": "Emperor Akbar's policy of religious tolerance and universal peace." }
+    ],
+    "down": [
+      { "number": 10, "clue": "Financial instrument functioning like early banking",         "answer": "HUNDI",          "direction": "down",   "row": 3,  "col": 2, "hint": "A traditional credit instrument used by merchants for transferring money." },
+      { "number": 4,  "clue": "Tax imposed on non-Muslims under the Sultanate",             "answer": "JIZYA",          "direction": "down",   "row": 1,  "col": 4, "hint": "A religious tax levied on non-Muslim subjects in medieval Islamic kingdoms." },
+      { "number": 3,  "clue": "Turkic-Mongol conqueror who devastated Delhi in 1398",       "answer": "TIMUR",          "direction": "down",   "row": 1,  "col": 8, "hint": "This fierce Central Asian ruler brought destruction to Delhi in the late 14th century." },
+      { "number": 13, "clue": "Capital of Vijayanagara Empire",                             "answer": "HAMPI",          "direction": "down",   "row": 4,  "col": 1, "hint": "The magnificent ruins of this city showcase the grandeur of Vijayanagara." },
+      { "number": 6,  "clue": "Destruction of religious images",                             "answer": "ICONOCLASM",     "direction": "down",   "row": 5,  "col": 9, "hint": "The act of breaking or destroying religious symbols and images." }
+    ]
+  }
+}
+    "size": {
+      "rows": 20,
+      "cols": 20
+    },
+    "maxXP": 100,
+    "bonusXP": 20,
+    "timeLimit": 480
+  },
+  "clues": {
+    "across": [
+      {
+        "number": 3,
+        "clue": "Turkic-Mongol conqueror who devastated Delhi in 1398",
+        "answer": "TIMUR",
+        "hint": "This fierce Central Asian ruler brought destruction to Delhi in the late 14th century",
+        "direction": "across",
+        "row": 0,
+        "col": 0
+      },
+      {
+        "number": 7,
+        "clue": "Battle in 1565 that destroyed the Vijayanagara city",
+        "answer": "TALIKOTA",
+        "hint": "This decisive battle marked the end of the great Vijayanagara Empire",
+        "direction": "across",
+        "row": 5,
+        "col": 0
+      },
+      {
+        "number": 9,
+        "clue": "System where nobles maintained troops in exchange for land",
+        "answer": "MANSABDARI",
+        "hint": "The Mughal military-administrative system ranking nobles and their responsibilities",
+        "direction": "across",
+        "row": 8,
+        "col": 0
+      },
+      {
+        "number": 12,
+        "clue": "Ahom commander who defeated Mughals at Saraighat",
+        "answer": "LACHITBORPHUKAN",
+        "hint": "This brilliant Ahom general led the defense against Mughal invasion in Assam",
+        "direction": "across",
+        "row": 10,
+        "col": 0
+      },
+      {
+        "number": 14,
+        "clue": "Rajput warrior queen of the Garha kingdom",
+        "answer": "DURGAVATI",
+        "hint": "A brave queen who fought against Mughal forces to protect her kingdom",
+        "direction": "across",
+        "row": 12,
+        "col": 0
+      },
+      {
+        "number": 16,
+        "clue": "Akbar's doctrine meaning 'peace with all'",
+        "answer": "SULHIKUL",
+        "hint": "Emperor Akbar's policy of religious tolerance and universal peace",
+        "direction": "across",
+        "row": 15,
+        "col": 2
+      }
+    ],
+    "down": [
+      {
+        "number": 1,
+        "clue": "Epic poem written by Krishnadevaraya in Telugu",
+        "answer": "AMUKTAMALYADA",
+        "hint": "A classical Telugu literary masterpiece by the Vijayanagara emperor",
+        "direction": "down",
+        "row": 0,
+        "col": 1
+      },
+      {
+        "number": 4,
+        "clue": "Tax imposed on non-Muslims under the Sultanate",
+        "answer": "JIZYA",
+        "hint": "A religious tax levied on non-Muslim subjects in medieval Islamic kingdoms",
+        "direction": "down",
+        "row": 2,
+        "col": 7
+      },
+      {
+        "number": 6,
+        "clue": "Destruction of religious images",
+        "answer": "ICONOCLASM",
+        "hint": "The act of breaking or destroying religious symbols and images",
+        "direction": "down",
+        "row": 5,
+        "col": 8
+      },
+      {
+        "number": 10,
+        "clue": "Financial instrument functioning like early banking",
+        "answer": "HUNDI",
+        "hint": "A traditional credit instrument used by merchants for transferring money",
+        "direction": "down",
+        "row": 6,
+        "col": 2
+      },
+      {
+        "number": 13,
+        "clue": "Capital of Vijayanagara Empire",
+        "answer": "HAMPI",
+        "hint": "The magnificent ruins of this city showcase the grandeur of Vijayanagara",
+        "direction": "down",
+        "row": 9,
+        "col": 7
+      }
+    ]
+  }
+}
+        "clue": "Microbes used to enrich soil through nitrogen fixation",
+        "answer": "MANURE",
+        "hint": "Microbes that decompose farm waste produce this natural fertiliser",
+        "direction": "down",
+        "row": 6,
+        "col": 10
+      }
+    ]
+  }
+}

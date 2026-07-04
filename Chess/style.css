@@ -1,0 +1,370 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('img/chess_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    background: rgba(26, 26, 46, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1100px;
+    width: 95%;
+    margin: 20px auto;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 2.2em;
+    color: #f4d03f;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+}
+
+h3 {
+    margin-top: 0;
+    color: #f4d03f;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+#status {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #f4d03f;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    padding: 8px;
+    background: rgba(244, 208, 63, 0.15);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.game-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+#myBoard {
+    width: 100%;
+    max-width: 450px;
+    flex-shrink: 0;
+    touch-action: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    border: 3px solid rgba(244, 208, 63, 0.3);
+}
+
+.side-panel {
+    width: 160px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#move-history {
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    line-height: 1.8;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+}
+
+#move-history::-webkit-scrollbar {
+    width: 8px;
+}
+
+#move-history::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+#move-history::-webkit-scrollbar-thumb {
+    background: rgba(244, 208, 63, 0.6);
+    border-radius: 4px;
+}
+
+#move-history::-webkit-scrollbar-thumb:hover {
+    background: rgba(244, 208, 63, 0.8);
+}
+
+.move-entry {
+    margin-bottom: 4px;
+}
+
+.captured-pieces {
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    min-height: 35px;
+    padding: 8px;
+    background: rgba(244, 208, 63, 0.1);
+    border-radius: 6px;
+    border: 1px solid rgba(244, 208, 63, 0.2);
+}
+
+.thinking {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #64b5f6;
+    font-size: 1.1em;
+    animation: pulse 1.5s ease-in-out infinite;
+    text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#homeBtn {
+    background: linear-gradient(135deg, #7f8c8d 0%, #5a6268 100%);
+    box-shadow: 0 4px 15px rgba(127, 140, 141, 0.4);
+}
+
+#homeBtn:hover {
+    box-shadow: 0 6px 20px rgba(127, 140, 141, 0.6);
+}
+
+#resetBtn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+}
+
+#resetBtn:hover {
+    box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
+}
+
+select {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+/* Highlight legal moves */
+.highlight-move {
+    box-shadow: inset 0 0 3px 3px yellow;
+}
+
+/* Home Page Styles */
+.home-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.home-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.home-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Mobile background - show on mobile devices */
+.home-bg-mobile {
+    display: block;
+}
+
+/* Desktop background - hide on mobile */
+.home-bg-desktop {
+    display: none;
+}
+
+/* Show desktop bg on larger screens */
+@media (min-width: 768px) {
+    .home-bg-mobile {
+        display: none;
+    }
+    .home-bg-desktop {
+        display: block;
+    }
+}
+
+.home-content {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 1vh;
+}
+
+.logo-button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    position: relative;
+}
+
+.game-logo {
+    width: 55vw;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.7));
+    margin-bottom: -5vh;
+    z-index: 1;
+}
+
+.play-btn-img {
+    width: 35vw;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+    filter: drop-shadow(0 8px 20px rgba(244, 208, 63, 0.6));
+    z-index: 2;
+    position: relative;
+}
+
+/* Landscape mode - use smaller sizes */
+@media (orientation: landscape) {
+    .game-logo {
+        width: 25vw;
+        margin-bottom: -3vh;
+    }
+    
+    .play-btn-img {
+        width: 16vw;
+    }
+}
+
+.play-btn-img:hover {
+    transform: translateY(-5px) scale(1.05);
+    filter: drop-shadow(0 12px 30px rgba(244, 208, 63, 0.9));
+}
+
+.play-btn-img:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* Keep consistent sizing across all devices */
+/* Mobile/tablet responsive design */
+@media (max-width: 768px) {
+    .game-area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side-panel {
+        width: 100%;
+        max-width: 450px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .captured-pieces {
+        display: inline-block;
+        min-width: 45%;
+    }
+
+    #move-history {
+        width: 100%;
+        box-sizing: border-box;
+        max-height: 200px;
+    }
+
+    .controls {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .container {
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    button {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+    
+    #myBoard {
+        max-width: 95vw;
+    }
+}

@@ -1,0 +1,51 @@
+# GitHub Pages Jekyll Configuration
+# This file configures Jekyll to exclude unnecessary files and directories
+
+# Basic settings
+title: Crossword Currency
+description: A currency-themed crossword puzzle game
+
+# Exclude directories and files from processing
+exclude:
+  - node_modules/
+  - js-analytics-bridge/node_modules/
+  - js-analytics-bridge/dist/
+  - js-analytics-bridge/package.json
+  - js-analytics-bridge/package-lock.json
+  - js-analytics-bridge/rollup.config.js
+  - js-analytics-bridge/tests/
+  - "**/node_modules/**"
+  - "**/dist/**"
+  - "**/*.log"
+  - package.json
+  - package-lock.json
+  - yarn.lock
+  - .gitignore
+  - .gitattributes
+  - README.md
+  - CLEANUP_INSTRUCTIONS.md
+  - .vscode/
+  - .idea/
+  - "*.config.js"
+  - Gemfile
+  - Gemfile.lock
+
+# Theme settings (GitHub Pages default)
+theme: jekyll-theme-primer
+
+# Plugins
+plugins:
+  - jekyll-relative-links
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Collections and defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

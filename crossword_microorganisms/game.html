@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔬 Invisible World Crossword Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <div class="title-section">
+                <h1 id="puzzle-title">🔬 Invisible World</h1>
+                <p class="subtitle" id="level-subtitle">Microscopic Mysteries - Level 1</p>
+            </div>
+            <div class="level-buttons">
+                <button class="level-btn active" data-level="1">Level 1</button>
+                <button class="level-btn" data-level="2" id="level2-btn" disabled>Level 2 🔒</button>
+            </div>
+            <div class="stats-display">
+                <div class="stat-box xp-display">
+                    <span class="stat-label">XP:</span>
+                    <span class="stat-value"><span id="current-xp">0</span> / <span id="max-xp">200</span></span>
+                </div>
+                <div class="stat-box accuracy-display">
+                    <span class="stat-label">Accuracy:</span>
+                    <span class="stat-value" id="accuracy-value">100%</span>
+                </div>
+                <div class="stat-box attempts-display">
+                    <span class="stat-label">Attempts:</span>
+                    <span class="stat-value" id="attempts-value">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hint-display hidden" id="hint-display">
+            <span class="hint-icon">💡</span>
+            <span class="hint-text" id="hint-text"></span>
+        </div>
+
+        <div class="crossword-container">
+            <div id="crossword-grid"></div>
+        </div>
+
+        <div class="clues-container">
+            <div class="clue-list-wrapper">
+                <h2>Across</h2>
+                <ol id="across-clues"></ol>
+            </div>
+            <div class="clue-list-wrapper">
+                <h2>Down</h2>
+                <ol id="down-clues"></ol>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="check-btn" class="btn-primary">✓ Check Puzzle</button>
+            <button id="clear-btn" class="btn-secondary">🗑️ Clear Grid</button>
+        </div>
+    </div>
+
+    <div id="success-overlay" class="hidden">
+        <div class="success-box">
+            <h2 id="completion-message">🎉 Level Complete! 🎉</h2>
+            <div class="completion-stats">
+                <div class="stat-item">
+                    <span class="stat-icon">⭐</span>
+                    <span class="stat-label">XP Earned</span>
+                    <span class="stat-number" id="earned-xp">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-icon">🎯</span>
+                    <span class="stat-label">Accuracy</span>
+                    <span class="stat-number" id="accuracy-display">100%</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-icon">⏱️</span>
+                    <span class="stat-label">Time Taken</span>
+                    <span class="stat-number" id="time-display">0:00</span>
+                </div>
+            </div>
+            <div class="educational-fact" id="educational-fact">
+                <h3>🔬 Did You Know?</h3>
+                <p id="fact-text"></p>
+            </div>
+            <div class="completion-actions">
+                <button class="next-level-btn hidden" id="next-level-btn">Continue to Level 2 →</button>
+                <button class="replay-btn" id="replay-btn">↻ Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="admin-panel" class="hidden">
+        <h3>🔧 Admin Panel</h3>
+        <p>Debug mode activated!</p>
+        <button id="unlock-all-btn">Unlock All Levels</button>
+        <button id="reset-progress-btn">Reset Progress</button>
+    </div>
+
+    <audio src="music.mp3" loop id="bg-music"></audio>
+
+    <!-- Music toggle button -->
+    <button class="music-btn" id="music-btn" title="Toggle Music">🔊</button>
+
+    <script src="js-analytics-bridge/dist/analytics-bridge.js?v=2"></script>
+    <script src="script.js?v=2"></script>
+    <script>
+        // Music persistence from landing page
+        const bgMusic = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-btn');
+        let musicPlaying = false;
+
+        bgMusic.volume = 0.4;
+
+        function setMusicState(playing) {
+            musicPlaying = playing;
+            musicBtn.textContent = playing ? '🔊' : '🔇';
+            musicBtn.classList.toggle('muted', !playing);
+            sessionStorage.setItem('musicPlaying', playing ? '1' : '0');
+        }
+
+        // Restore state from landing page
+        const savedState = sessionStorage.getItem('musicPlaying');
+        if (savedState === '1') {
+            bgMusic.play().then(() => setMusicState(true)).catch(() => setMusicState(false));
+        } else {
+            setMusicState(false);
+        }
+
+        musicBtn.addEventListener('click', () => {
+            if (musicPlaying) {
+                bgMusic.pause();
+                setMusicState(false);
+            } else {
+                bgMusic.play().catch(() => {});
+                setMusicState(true);
+            }
+        });
+    </script>
+</body>
+</html>

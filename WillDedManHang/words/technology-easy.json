@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "ROBOT",
+      "category": "Technology",
+      "hint": "Machine that can perform tasks automatically",
+      "educational": "Robots are programmable machines that can perform tasks. They're used in manufacturing, medicine, exploration, and daily life."
+    },
+    {
+      "word": "INTERNET",
+      "category": "Technology",
+      "hint": "Global network connecting millions of computers",
+      "educational": "The Internet is a worldwide network that connects billions of devices, enabling communication, information sharing, and services globally."
+    },
+    {
+      "word": "SOFTWARE",
+      "category": "Technology",
+      "hint": "Programs and applications for computers",
+      "educational": "Software consists of programs and data that tell computers what to do. Examples include operating systems, apps, and games."
+    },
+    {
+      "word": "BATTERY",
+      "category": "Technology",
+      "hint": "Device that stores electrical energy",
+      "educational": "Batteries convert chemical energy into electrical energy, powering portable devices. Lithium-ion batteries are now most common."
+    },
+    {
+      "word": "WIRELESS",
+      "category": "Technology",
+      "hint": "Technology transmitting data without wires",
+      "educational": "Wireless technology uses radio waves to transmit data. WiFi, Bluetooth, and cellular networks are wireless technologies."
+    },
+    {
+      "word": "SENSOR",
+      "category": "Technology",
+      "hint": "Device that detects and responds to input",
+      "educational": "Sensors detect physical properties like temperature, light, or motion and convert them to signals. They're essential in modern devices."
+    },
+    {
+      "word": "LAPTOP",
+      "category": "Technology",
+      "hint": "Portable personal computer",
+      "educational": "Laptops are portable computers that integrate display, keyboard, and battery. They've revolutionized mobile computing."
+    },
+    {
+      "word": "PRINTER",
+      "category": "Technology",
+      "hint": "Device that produces text or images on paper",
+      "educational": "Printers transfer digital documents to physical paper using various methods including inkjet and laser technology."
+    },
+    {
+      "word": "CAMERA",
+      "category": "Technology",
+      "hint": "Device for capturing images and videos",
+      "educational": "Cameras record images using light sensors. Digital cameras have largely replaced film cameras in modern photography."
+    },
+    {
+      "word": "SMARTPHONE",
+      "category": "Technology",
+      "hint": "Mobile device with advanced computing abilities",
+      "educational": "Smartphones combine phone capabilities with powerful computers, cameras, and internet access, transforming communication and daily life."
+    }
+  ]
+}

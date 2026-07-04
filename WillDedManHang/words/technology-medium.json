@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "BANDWIDTH",
+      "category": "Technology",
+      "hint": "Maximum data transfer rate of a network",
+      "educational": "Bandwidth measures how much data can be transmitted over a connection in a given time, typically measured in megabits or gigabits per second."
+    },
+    {
+      "word": "ENCRYPTION",
+      "category": "Technology",
+      "hint": "Converting data into secret code",
+      "educational": "Encryption protects data by converting it into unreadable format. Only authorized parties with the decryption key can access it."
+    },
+    {
+      "word": "FIREWALL",
+      "category": "Technology",
+      "hint": "Security system protecting networks",
+      "educational": "Firewalls monitor and control network traffic based on security rules, protecting systems from unauthorized access and cyber threats."
+    },
+    {
+      "word": "PROCESSOR",
+      "category": "Technology",
+      "hint": "Brain of the computer that executes instructions",
+      "educational": "The processor (CPU) executes program instructions, performing calculations and managing computer operations. Speed measured in gigahertz."
+    },
+    {
+      "word": "BLUETOOTH",
+      "category": "Technology",
+      "hint": "Short range wireless technology standard",
+      "educational": "Bluetooth enables wireless communication between devices over short distances, commonly used for headphones, speakers, and file transfers."
+    },
+    {
+      "word": "GRAPHICS",
+      "category": "Technology",
+      "hint": "Visual images and designs on screens",
+      "educational": "Computer graphics use specialized processors (GPUs) to create and display images, essential for games, videos, and visual applications."
+    },
+    {
+      "word": "STREAMING",
+      "category": "Technology",
+      "hint": "Continuous transmission of audio or video",
+      "educational": "Streaming delivers media content continuously over the internet without downloading entire files. Netflix and Spotify use streaming."
+    },
+    {
+      "word": "DATABASE",
+      "category": "Technology",
+      "hint": "Organized collection of structured information",
+      "educational": "Databases store and manage data efficiently using systems like SQL. They're essential for websites, apps, and business operations."
+    },
+    {
+      "word": "ALGORITHM",
+      "category": "Technology",
+      "hint": "Step by step problem solving procedure",
+      "educational": "Algorithms are precise instruction sequences for solving problems. They power search engines, social media feeds, and AI systems."
+    },
+    {
+      "word": "INTERFACE",
+      "category": "Technology",
+      "hint": "Point of interaction between user and device",
+      "educational": "User interfaces (UI) enable interaction with technology. Graphical user interfaces (GUIs) use visual elements like buttons and menus."
+    }
+  ]
+}

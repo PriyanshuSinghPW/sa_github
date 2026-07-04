@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "PHOTOSYNTHESIS",
+      "category": "Science",
+      "hint": "Process plants use to make food from sunlight",
+      "educational": "Photosynthesis is the process by which plants convert light energy into chemical energy, producing glucose and oxygen from carbon dioxide and water."
+    },
+    {
+      "word": "EVOLUTION",
+      "category": "Science",
+      "hint": "Change in species over generations",
+      "educational": "Evolution is the process by which living organisms change over time through natural selection, leading to the diversity of life on Earth."
+    },
+    {
+      "word": "MOLECULE",
+      "category": "Science",
+      "hint": "Group of atoms bonded together",
+      "educational": "A molecule is formed when two or more atoms join together chemically. Water (H2O) and oxygen gas (O2) are examples of molecules."
+    },
+    {
+      "word": "CHROMOSOME",
+      "category": "Science",
+      "hint": "Structure containing genetic information DNA",
+      "educational": "Chromosomes are thread-like structures made of DNA that carry genetic information. Humans have 23 pairs of chromosomes."
+    },
+    {
+      "word": "ECOSYSTEM",
+      "category": "Science",
+      "hint": "Community of living things and their environment",
+      "educational": "An ecosystem includes all living organisms in an area and their physical environment, interacting as a system through energy flow and nutrient cycling."
+    },
+    {
+      "word": "NEUTRON",
+      "category": "Science",
+      "hint": "Neutral particle in an atom nucleus",
+      "educational": "Neutrons are subatomic particles with no electric charge found in atomic nuclei. They help hold the nucleus together and determine isotopes."
+    },
+    {
+      "word": "CATALYST",
+      "category": "Science",
+      "hint": "Substance that speeds up chemical reactions",
+      "educational": "A catalyst is a substance that increases the rate of a chemical reaction without being consumed. Enzymes are biological catalysts."
+    },
+    {
+      "word": "PROTEIN",
+      "category": "Science",
+      "hint": "Large molecules essential for body structure",
+      "educational": "Proteins are large biomolecules made of amino acids. They perform many functions including building tissues, catalyzing reactions, and fighting infections."
+    },
+    {
+      "word": "VELOCITY",
+      "category": "Science",
+      "hint": "Speed in a particular direction",
+      "educational": "Velocity is the rate of change of an object's position. Unlike speed, velocity includes direction, making it a vector quantity."
+    },
+    {
+      "word": "RADIATION",
+      "category": "Science",
+      "hint": "Energy transmitted through waves or particles",
+      "educational": "Radiation is energy that travels through space as waves or particles. It includes visible light, radio waves, X-rays, and nuclear radiation."
+    }
+  ]
+}

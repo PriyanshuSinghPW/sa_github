@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "title": "World Currencies Crossword",
+    "author": "Geography Tutor",
+    "size": {
+      "rows": 11,
+      "cols": 11
+    }
+  },
+  "clues": {
+    "across": [
+      {
+        "number": 3,
+        "clue": "USA, Canada, Australia",
+        "answer": "DOLLAR",
+        "direction": "across",
+        "row": 1,
+        "col": 3
+      },
+      {
+        "number": 4,
+        "clue": "Denmark, Norway",
+        "answer": "KRONE",
+        "direction": "across",
+        "row": 3,
+        "col": 1
+      },
+      {
+        "number": 8,
+        "clue": "Israel",
+        "answer": "SHEKEL",
+        "direction": "across",
+        "row": 7,
+        "col": 0
+      },
+      {
+        "number": 10,
+        "clue": "Japan",
+        "answer": "YEN",
+        "direction": "across",
+        "row": 7,
+        "col": 7
+      },
+      {
+        "number": 11,
+        "clue": "Brazil",
+        "answer": "REAL",
+        "direction": "across",
+        "row": 9,
+        "col": 5
+      }
+    ],
+    "down": [
+      {
+        "number": 1,
+        "clue": "UK, Egypt",
+        "answer": "POUND",
+        "direction": "down",
+        "row": 0,
+        "col": 4
+      },
+      {
+        "number": 2,
+        "clue": "South Africa",
+        "answer": "RAND",
+        "direction": "down",
+        "row": 0,
+        "col": 7
+      },
+      {
+        "number": 5,
+        "clue": "India",
+        "answer": "RUPEE",
+        "direction": "down",
+        "row": 3,
+        "col": 2
+      },
+      {
+        "number": 6,
+        "clue": "Argentina",
+        "answer": "PESO",
+        "direction": "down",
+        "row": 5,
+        "col": 0
+      },
+      {
+        "number": 7,
+        "clue": "South Korea",
+        "answer": "WON",
+        "direction": "down",
+        "row": 5,
+        "col": 9
+      },
+      {
+        "number": 9,
+        "clue": "Turkey",
+        "answer": "LIRA",
+        "direction": "down",
+        "row": 7,
+        "col": 5
+      },
+      {
+        "number": 10,
+        "clue": "China",
+        "answer": "YUAN",
+        "direction": "down",
+        "row": 7,
+        "col": 7
+      }
+    ]
+  }
+}

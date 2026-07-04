@@ -1,0 +1,26 @@
+﻿{
+  "metadata": {
+    "title": "Crossword Modal Mastery",
+    "author": "Physics Wallah",
+    "level": 1,
+    "difficulty": "Grammar Scholar",
+    "size": { "rows": 12, "cols": 12 },
+    "bonusXP": 20
+  },
+  "clues": {
+    "across": [
+      { "number": 1,  "clue": "Used for advice",         "answer": "SHOULD", "direction": "across", "row": 0,  "col": 0, "hint": "This modal is used to give advice or a recommendation, e.g. You ___ eat more vegetables." },
+      { "number": 4,  "clue": "Used to express ability", "answer": "CAN",    "direction": "across", "row": 2,  "col": 2, "hint": "This modal expresses present ability or possibility, e.g. I ___ swim." },
+      { "number": 6,  "clue": "Negative of can",         "answer": "CANNOT", "direction": "across", "row": 4,  "col": 0, "hint": "The negative form expressing inability or prohibition, e.g. You ___ park here." },
+      { "number": 7,  "clue": "Polite request",          "answer": "WOULD",  "direction": "across", "row": 5,  "col": 2, "hint": "Used for polite requests or offers, e.g. ___ you like some tea?" },
+      { "number": 8,  "clue": "Future intention",        "answer": "WILL",   "direction": "across", "row": 6,  "col": 2, "hint": "Expresses future actions or decisions made at the moment of speaking." },
+      { "number": 9,  "clue": "Used to ask permission",  "answer": "MAY",    "direction": "across", "row": 8,  "col": 0, "hint": "A formal modal used to ask for or grant permission, e.g. ___ I come in?" },
+      { "number": 10, "clue": "Weak possibility",        "answer": "MIGHT",  "direction": "across", "row": 10, "col": 0, "hint": "Expresses a weak or uncertain possibility, e.g. It ___ rain today." }
+    ],
+    "down": [
+      { "number": 2,  "clue": "Strong obligation",       "answer": "MUST",   "direction": "down",   "row": 1,  "col": 5, "hint": "Expresses strong obligation or necessity, e.g. You ___ finish your homework." },
+      { "number": 3,  "clue": "Formal suggestion",       "answer": "SHALL",  "direction": "down",   "row": 2,  "col": 1, "hint": "Used for formal suggestions or offers, especially in first person, e.g. ___ we begin?" },
+      { "number": 5,  "clue": "Past ability",            "answer": "COULD",  "direction": "down",   "row": 3,  "col": 4, "hint": "The past tense of can, used to express past ability, e.g. I ___ ride a bike when I was five." }
+    ]
+  }
+}

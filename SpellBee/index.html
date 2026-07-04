@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Spelling Bee Game</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Home Screen -->
+    <div id="home-screen" class="home-screen">
+        <div class="home-content">
+            <h1 class="home-title">🐝 Spelling Bee</h1>
+            <p class="home-subtitle">Create words from the hive!</p>
+            
+            <div class="home-buttons">
+                <button id="play-btn" class="btn btn-large btn-primary">Start Playing</button>
+                <button id="how-to-play-btn" class="btn btn-large btn-secondary">How to Play</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Play Modal -->
+    <div id="how-to-play-modal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="modal-close" id="close-instructions">×</span>
+            <div class="modal-icon">🐝</div>
+            <h2>Complete Rules</h2>
+            <div class="instructions">
+                <div class="instruction-block">
+                    <h3>🎯 Objective</h3>
+                    <p>Create as many words as possible using letters from the hive. Score points to advance through 10 challenging levels!</p>
+                </div>
+                
+                <div class="instruction-block">
+                    <h3>📏 Word Rules</h3>
+                    <ul>
+                        <li>Words must be <strong>at least 4 letters</strong> long</li>
+                        <li>Words must include the <strong>center (yellow) letter</strong></li>
+                        <li>Letters can be <strong>used multiple times</strong></li>
+                        <li>Only letters in the hive can be used</li>
+                    </ul>
+                </div>
+                
+                <div class="instruction-block">
+                    <h3>⭐ Scoring</h3>
+                    <ul>
+                        <li>4-letter words: <strong>1 point</strong></li>
+                        <li>5+ letter words: <strong>word length points</strong></li>
+                        <li>Pangrams (all 7 letters): <strong>Bonus points!</strong></li>
+                    </ul>
+                </div>
+                
+                <div class="instruction-block">
+                    <h3>⏱️ Time & Target</h3>
+                    <p>You have <strong>5 minutes</strong> per level. Score <strong>20 points</strong> to unlock the next level!</p>
+                </div>
+                
+                <div class="instruction-block">
+                    <h3>⌨️ Controls</h3>
+                    <ul>
+                        <li><strong>Click</strong> letters or use your <strong>keyboard</strong></li>
+                        <li>Press <strong>Enter</strong> to submit words</li>
+                        <li>Press <strong>Backspace</strong> to delete</li>
+                        <li>Press <strong>Space</strong> to shuffle letters</li>
+                    </ul>
+                </div>
+            </div>
+            <button id="close-instructions-btn" class="btn btn-primary btn-large">Got it! Let's Play!</button>
+        </div>
+    </div>
+
+    <!-- Custom Confirm Modal -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">⚠️</div>
+            <h2 id="confirm-title">Confirm Reset</h2>
+            <p id="confirm-message">Are you sure you want to reset? All progress will be lost.</p>
+            <div class="modal-actions">
+                <button id="confirm-cancel" class="btn btn-secondary">Cancel</button>
+                <button id="confirm-ok" class="btn btn-primary">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-wrapper" id="game-container" style="display: none;">
+        <header>
+            <h1>🐝 Spelling Bee</h1>
+            <div class="level-info-card">
+                <span id="current-level">Level 1</span>
+                <span class="separator">•</span>
+                <span id="timer">5:00</span>
+            </div>
+        </header>
+
+        <div class="game-board">
+            <!-- Score Panel -->
+            <div class="score-panel">
+                <div class="score-item">
+                    <span class="label">Score</span>
+                    <span id="score" class="value">0</span>
+                </div>
+                <div class="score-divider"></div>
+                <div class="score-item">
+                    <span class="label">Target</span>
+                    <span id="target-score" class="value">20</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-section">
+                <div class="progress-labels">
+                    <span id="rank">Beginner</span>
+                    <span id="progress-percent">0%</span>
+                </div>
+                <div class="progress-container">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Current Word Display -->
+            <div class="word-display-container">
+                <div class="word-display">
+                    <span id="current-word" class="placeholder">Type letters...</span>
+                </div>
+            </div>
+
+            <!-- Messages -->
+            <div id="message" class="message"></div>
+
+            <!-- Hive -->
+            <div class="hive-wrapper">
+                <div class="hive-container">
+                    <div class="hive">
+                        <div class="hex outer" id="hex-0"></div> <!-- Top -->
+                        <div class="hex outer" id="hex-1"></div> <!-- Top Right -->
+                        <div class="hex outer" id="hex-2"></div> <!-- Bottom Right -->
+                        <div class="hex outer" id="hex-3"></div> <!-- Bottom -->
+                        <div class="hex outer" id="hex-4"></div> <!-- Bottom Left -->
+                        <div class="hex outer" id="hex-5"></div> <!-- Top Left -->
+                        <div class="hex center" id="hex-center"></div> <!-- Center -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button id="delete-btn" class="btn btn-secondary">Delete</button>
+                <button id="shuffle-btn" class="btn btn-icon" title="Shuffle" aria-label="Shuffle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>
+                </button>
+                <button id="enter-btn" class="btn btn-primary">Enter</button>
+            </div>
+
+            <!-- Found Words -->
+            <div class="found-words">
+                <h3>Found Words <span class="badge" id="found-count">0</span></h3>
+                <div id="words-list" class="words-list"></div>
+            </div>
+
+            <!-- Actions -->
+            <div class="actions">
+                <button id="reset-btn" class="btn btn-outline">Reset Game</button>
+                <button id="next-level-btn" class="btn btn-success" disabled>Next Level</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">🏆</div>
+            <h2 id="modal-title">Level Complete!</h2>
+            <p id="modal-message"></p>
+            <div class="modal-actions">
+                <button id="modal-close" class="btn btn-secondary">Close</button>
+                <button id="modal-next" class="btn btn-primary">Next Level</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMPORTANT: Analytics must load FIRST -->
+    <script src="js-analytics-bridge/analytics-bridge.js?v=levelwise-20260704"></script>
+    <script src="app.js?v=levelwise-20260704-xp20"></script>
+</body>
+</html>

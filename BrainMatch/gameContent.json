@@ -1,0 +1,43 @@
+{
+    "gameMode": "textToText",
+    "content": {
+        "science": {
+            "level1": {
+                "pairs": [
+                    { "a": "Fe", "b": "Iron" },
+                    { "a": "C", "b": "Carbon" },
+                    { "a": "Cu", "b": "Copper" },
+                    { "a": "O", "b": "Oxygen" },
+                    { "a": "I", "b": "Iodine" },
+                    { "a": "Ni", "b": "Nickel" },
+                    { "a": "Au", "b": "Gold" },
+                    { "a": "Ag", "b": "Silver" }
+                ]
+            },
+            "level2": {
+                "pairs": [
+                    { "a": "He", "b": "Helium" },
+                    { "a": "Li", "b": "Lithium" },
+                    { "a": "B", "b": "Boron" },
+                    { "a": "S", "b": "Sulphur" },
+                    { "a": "Ne", "b": "Neon" },
+                    { "a": "Na", "b": "Sodium" },
+                    { "a": "Si", "b": "Silicon" },
+                    { "a": "Ra", "b": "Radium" }
+                ]
+            },
+            "level3": {
+                "pairs": [
+                    { "a": "Ca", "b": "Calcium" },
+                    { "a": "Co", "b": "Cobalt" },
+                    { "a": "Xe", "b": "Xenon" },
+                    { "a": "Rn", "b": "Radon" },
+                    { "a": "Ar", "b": "Argon" },
+                    { "a": "Pb", "b": "Lead" },
+                    { "a": "Sn", "b": "Tin" },
+                    { "a": "Zn", "b": "Zinc" }
+                ]
+            }
+        }
+    }
+}

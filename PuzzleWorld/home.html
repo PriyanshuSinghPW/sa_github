@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula Maze - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bg.mp3" type="audio/mpeg">
+    </audio>
+    
+    <button id="muteBtn" class="mute-btn" title="Toggle Music">🔊</button>
+    
+    <div class="home-container">
+        <h1 class="game-title">Nebula Maze</h1>
+        <p class="game-subtitle">Navigate the cosmic labyrinth</p>
+        
+        <div class="menu-buttons">
+            <a href="index.html" class="btn btn-large pulse">Play Game</a>
+            <button id="how-to-play-btn" class="btn btn-large">How to Play</button>
+        </div>
+
+        <div id="how-to-play-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>How to Play</h2>
+                <div class="instructions">
+                    <p>🎮 <strong>Objective:</strong> Guide the blue player to the purple exit.</p>
+                    <p>💎 <strong>Collect:</strong> Gather all yellow collectibles to unlock the exit.</p>
+                    <p>🕹️ <strong>Controls:</strong></p>
+                    <ul>
+                        <li>Arrow Keys or WASD to move</li>
+                        <li>On mobile, use the on-screen D-pad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Background Music
+        const bgMusic = document.getElementById('bgMusic');
+        const muteBtn = document.getElementById('muteBtn');
+        bgMusic.volume = 0.2; // Adjust this value between 0.0 (silent) and 1.0 (full volume)
+        
+        let isMuted = false;
+        
+        // Auto-play with user interaction
+        document.addEventListener('click', () => {
+            bgMusic.play().catch(e => console.log('Audio play failed:', e));
+        }, { once: true });
+        
+        // Mute/Unmute toggle
+        muteBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            isMuted = !isMuted;
+            bgMusic.muted = isMuted;
+            muteBtn.textContent = isMuted ? '🔇' : '🔊';
+        });
+
+        const modal = document.getElementById('how-to-play-modal');
+        const btn = document.getElementById('how-to-play-btn');
+        const span = document.getElementsByClassName("close-modal")[0];
+
+        btn.onclick = function() {
+            modal.classList.remove('hidden');
+            setTimeout(() => modal.classList.add('visible'), 10);
+        }
+
+        span.onclick = function() {
+            modal.classList.remove('visible');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.classList.remove('visible');
+                setTimeout(() => modal.classList.add('hidden'), 300);
+            }
+        }
+    </script>
+    <script src="background.js"></script>
+</body>
+</html>

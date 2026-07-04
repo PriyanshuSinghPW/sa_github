@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Test</title>
+</head>
+<body>
+    <h1>Analytics Test Page</h1>
+    <p>Open the browser console (F12) to see analytics logs</p>
+    <button id="testBtn">Test Analytics</button>
+    
+    <script src="AnalyticsManager.js"></script>
+    <script>
+        // Test analytics
+        const analytics = new AnalyticsManager();
+        analytics.initialize('test_game', 'test_session_' + Date.now());
+        
+        analytics.startLevel('test_level_1');
+        analytics.addRawMetric('test_metric', 'test_value');
+        analytics.recordTask(
+            'test_level_1',
+            'task_1',
+            'Test task',
+            'correct',
+            'correct',
+            1000,
+            10
+        );
+        
+        document.getElementById('testBtn').addEventListener('click', () => {
+            analytics.endLevel('test_level_1', true, 5000, 100);
+            analytics.addRawMetric('final_score', 100);
+            analytics.submitReport();
+            alert('Check console for analytics payload!');
+        });
+        
+        console.log('✓ Analytics test page loaded successfully');
+        console.log('Click the button to submit test analytics report');
+    </script>
+</body>
+</html>

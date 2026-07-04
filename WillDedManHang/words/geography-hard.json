@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "TOPOGRAPHY",
+      "category": "Geography",
+      "hint": "Arrangement of natural and artificial features of an area",
+      "educational": "Topography describes the surface features of a place including elevation, slope, and landforms, crucial for mapping and land use planning."
+    },
+    {
+      "word": "GEOMORPHOLOGY",
+      "category": "Geography",
+      "hint": "Study of landforms and earth surface processes",
+      "educational": "Geomorphology studies how landforms develop through processes like erosion, weathering, and tectonic activity over geological time."
+    },
+    {
+      "word": "CARTOGRAPHY",
+      "category": "Geography",
+      "hint": "Science and art of making maps",
+      "educational": "Cartography combines science, aesthetics, and technique to create maps. Modern cartography uses GIS and satellite technology."
+    },
+    {
+      "word": "BIODIVERSITY",
+      "category": "Geography",
+      "hint": "Variety of life in a particular habitat",
+      "educational": "Biodiversity refers to the variety of life forms in an ecosystem. Tropical rainforests have the highest biodiversity on Earth."
+    },
+    {
+      "word": "CONTINENTAL",
+      "category": "Geography",
+      "hint": "Related to large landmasses of continents",
+      "educational": "Continental refers to characteristics of continents. Continental drift theory explains how continents moved over millions of years."
+    },
+    {
+      "word": "DEFORESTATION",
+      "category": "Geography",
+      "hint": "Clearing forests for other land uses",
+      "educational": "Deforestation is the permanent removal of forests, causing habitat loss, climate change, and soil erosion. Amazon faces severe deforestation."
+    },
+    {
+      "word": "URBANIZATION",
+      "category": "Geography",
+      "hint": "Growth of cities and shift from rural living",
+      "educational": "Urbanization is the increasing proportion of people living in cities. Over 55% of the world's population now lives in urban areas."
+    },
+    {
+      "word": "PRECIPITATION",
+      "category": "Geography",
+      "hint": "Water falling from atmosphere as rain or snow",
+      "educational": "Precipitation includes rain, snow, sleet, and hail. Distribution of precipitation determines climate zones and ecosystems."
+    },
+    {
+      "word": "SEISMOLOGY",
+      "category": "Geography",
+      "hint": "Scientific study of earthquakes",
+      "educational": "Seismology studies earthquakes and seismic waves. Seismographs detect and measure earthquakes, helping predict future events."
+    },
+    {
+      "word": "ECOSYSTEM",
+      "category": "Geography",
+      "hint": "Community of organisms interacting with environment",
+      "educational": "An ecosystem includes all living organisms and their physical environment interacting as a system through energy and nutrient cycles."
+    }
+  ]
+}

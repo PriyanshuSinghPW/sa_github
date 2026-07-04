@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "RENAISSANCE",
+      "category": "History",
+      "hint": "European cultural rebirth period after Middle Ages",
+      "educational": "The Renaissance was a period of renewed interest in art, science, and learning in Europe (14th-17th century), marking the transition to modern times."
+    },
+    {
+      "word": "INDUSTRIAL",
+      "category": "History",
+      "hint": "Revolution that transformed manufacturing",
+      "educational": "The Industrial Revolution (late 1700s-1800s) transformed society through mechanized manufacturing, factories, and mass production."
+    },
+    {
+      "word": "DEMOCRACY",
+      "category": "History",
+      "hint": "Government by the people through voting",
+      "educational": "Democracy is a form of government where power rests with the people. It originated in ancient Athens and has evolved over centuries."
+    },
+    {
+      "word": "CRUSADES",
+      "category": "History",
+      "hint": "Medieval religious military campaigns",
+      "educational": "The Crusades were a series of religious wars in the medieval period, primarily between Christians and Muslims over control of holy lands."
+    },
+    {
+      "word": "GLADIATOR",
+      "category": "History",
+      "hint": "Fighter who entertained ancient Romans",
+      "educational": "Gladiators were armed fighters who competed in violent confrontations for public entertainment in ancient Rome, often fighting to the death."
+    },
+    {
+      "word": "MONARCHY",
+      "category": "History",
+      "hint": "Government ruled by a king or queen",
+      "educational": "Monarchy is a form of government with a monarch (king or queen) as head of state. It was the most common government system throughout history."
+    },
+    {
+      "word": "SAMURAI",
+      "category": "History",
+      "hint": "Japanese military nobility and warriors",
+      "educational": "Samurai were the military nobility of medieval Japan, following a code of honor called Bushido and known for their swordsmanship."
+    },
+    {
+      "word": "REFORMATION",
+      "category": "History",
+      "hint": "Religious movement that split Christianity",
+      "educational": "The Reformation (16th century) was a religious movement led by Martin Luther that challenged Catholic Church authority and created Protestantism."
+    },
+    {
+      "word": "IMPERIALISM",
+      "category": "History",
+      "hint": "Policy of extending country power and influence",
+      "educational": "Imperialism is when a country extends its power through colonization or military force. European imperialism shaped much of modern world history."
+    },
+    {
+      "word": "ABOLITION",
+      "category": "History",
+      "hint": "Movement to end slavery",
+      "educational": "The abolition movement sought to end slavery. It succeeded in the British Empire (1833) and United States (1865) after long struggles."
+    }
+  ]
+}

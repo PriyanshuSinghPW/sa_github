@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "OCEAN",
+      "category": "Geography",
+      "hint": "Vast body of salt water",
+      "educational": "Oceans cover about 71% of Earth's surface. The five oceans are Pacific, Atlantic, Indian, Southern, and Arctic."
+    },
+    {
+      "word": "DESERT",
+      "category": "Geography",
+      "hint": "Dry region with little rainfall",
+      "educational": "Deserts receive less than 10 inches of rain per year. The Sahara is the world's largest hot desert."
+    },
+    {
+      "word": "MOUNTAIN",
+      "category": "Geography",
+      "hint": "Large natural elevation of earth surface",
+      "educational": "Mountains are formed by tectonic forces or volcanism. Mount Everest is Earth's highest mountain at 29,032 feet."
+    },
+    {
+      "word": "RIVER",
+      "category": "Geography",
+      "hint": "Natural flowing watercourse",
+      "educational": "Rivers flow from high elevations to low areas, eventually reaching seas or oceans. The Nile is the world's longest river."
+    },
+    {
+      "word": "ISLAND",
+      "category": "Geography",
+      "hint": "Land surrounded by water",
+      "educational": "Islands are pieces of land completely surrounded by water. They can be formed by volcanic activity or rising sea levels."
+    },
+    {
+      "word": "VALLEY",
+      "category": "Geography",
+      "hint": "Low area between hills or mountains",
+      "educational": "Valleys are low-lying areas often formed by erosion from rivers or glaciers. They're usually fertile regions good for farming."
+    },
+    {
+      "word": "VOLCANO",
+      "category": "Geography",
+      "hint": "Mountain that erupts with lava",
+      "educational": "Volcanoes form when molten rock from Earth's interior erupts through the surface. There are about 1,500 active volcanoes worldwide."
+    },
+    {
+      "word": "GLACIER",
+      "category": "Geography",
+      "hint": "Slow moving mass of ice",
+      "educational": "Glaciers are large masses of ice that flow slowly over land. They contain about 69% of Earth's fresh water."
+    },
+    {
+      "word": "EQUATOR",
+      "category": "Geography",
+      "hint": "Imaginary line around Earth middle",
+      "educational": "The equator is an imaginary circle equidistant from the poles, dividing Earth into Northern and Southern hemispheres."
+    },
+    {
+      "word": "FOREST",
+      "category": "Geography",
+      "hint": "Large area covered with trees",
+      "educational": "Forests cover about 31% of land area and are vital for biodiversity, climate regulation, and oxygen production."
+    }
+  ]
+}

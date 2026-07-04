@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "title": "Forces of Physics",
+    "author": "Shivansh",
+    "size": {
+      "rows": 12,
+      "cols": 12
+    }
+  },
+  "clues": {
+    "across": [
+      {
+        "number": 1,
+        "clue": "The force of air resistance.",
+        "answer": "DRAG",
+        "direction": "across",
+        "row": 2,
+        "col": 4
+      },
+      {
+        "number": 2,
+        "clue": "The force that pulls you down.",
+        "answer": "GRAVITY",
+        "direction": "across",
+        "row": 5,
+        "col": 0
+      },
+      {
+        "number": 3,
+        "clue": "The force in a stretched rope.",
+        "answer": "TENSION",
+        "direction": "across",
+        "row": 7,
+        "col": 3
+      },
+      {
+        "number": 4,
+        "clue": "The amount of matter in an object.",
+        "answer": "MASS",
+        "direction": "across",
+        "row": 11,
+        "col": 3
+      },
+      {
+        "number": 5,
+        "clue": "The upward force on an airplane's wings.",
+        "answer": "LIFT",
+        "direction": "across",
+        "row": 7,
+        "col": 0
+      }
+    ],
+    "down": [
+      {
+        "number": 6,
+        "clue": "The force that pushes a rocket forward.",
+        "answer": "THRUST",
+        "direction": "down",
+        "row": 0,
+        "col": 5
+      },
+      {
+        "number": 7,
+        "clue": "The force that opposes motion.",
+        "answer": "FRICTION",
+        "direction": "down",
+        "row": 0,
+        "col": 9
+      },
+      {
+        "number": 8,
+        "clue": "An object's resistance to changing motion.",
+        "answer": "INERTIA",
+        "direction": "down",
+        "row": 5,
+        "col": 4
+      },
+      {
+        "number": 9,
+        "clue": "The support force from a surface.",
+        "answer": "Normal",
+        "direction": "down",
+        "row": 6,
+        "col": 8
+      },
+      {
+        "number": 10,
+        "clue": "The force from a stretched coil.",
+        "answer": "spring",
+        "direction": "down",
+        "row": 0,
+        "col": 0
+      }
+    ]
+  }
+}

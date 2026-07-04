@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "id": "level_1",
+    "title": "Human Body Organs",
+    "author": "Shivansh",
+    "size": {
+      "rows": 12,
+      "cols": 12
+    }
+  },
+  "clues": {
+    "across": [
+      {
+        "number": 1,
+        "clue": "An organ that digests food.",
+        "answer": "STOMACH",
+        "direction": "across",
+        "row": 2,
+        "col": 1
+      },
+      {
+        "number": 2,
+        "clue": "Cleans the blood and produces bile.",
+        "answer": "LIVER",
+        "direction": "across",
+        "row": 5,
+        "col": 0
+      },
+      {
+        "number": 3,
+        "clue": "Makes insulin to control blood sugar.",
+        "answer": "Pancreas",
+        "direction": "across",
+        "row": 11,
+        "col": 1
+      },
+      {
+        "number": 4,
+        "clue": "Long tube that absorbs nutrients from food.",
+        "answer": "intestines",
+        "direction": "across",
+        "row": 8,
+        "col": 1
+      },
+      {
+        "number": 5,
+        "clue": "Stores urine before it leaves the body.",
+        "answer": "bladder",
+        "direction": "across",
+        "row": 0,
+        "col": 5
+      }
+    ],
+    "down": [
+      {
+        "number": 6,
+        "clue": "Two organs used for breathing air.",
+        "answer": "LUNGS",
+        "direction": "down",
+        "row": 5,
+        "col": 0
+      },
+      {
+        "number": 7,
+        "clue": "The control center of the nervous system.",
+        "answer": "BRAIN",
+        "direction": "down",
+        "row": 0,
+        "col": 5
+      },
+      {
+        "number": 8,
+        "clue": "Pumps blood around the body.",
+        "answer": "HEART",
+        "direction": "down",
+        "row": 4,
+        "col": 3
+      },
+      {
+        "number": 9,
+        "clue": "Filters waste from the blood to make urine.",
+        "answer": "KIDNEYS",
+        "direction": "down",
+        "row": 5,
+        "col": 8
+      },
+      {
+        "number": 10,
+        "clue": "The tube connecting the throat to the stomach.",
+        "answer": "esophagus",
+        "direction": "down",
+        "row": 0,
+        "col": 10
+      }
+    ]
+  }
+}

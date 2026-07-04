@@ -1,0 +1,26 @@
+﻿{
+  "metadata": {
+    "title": "Deep Biology",
+    "author": "Physics Wallah",
+    "level": 2,
+    "difficulty": "Advanced",
+    "size": { "rows": 15, "cols": 15 },
+    "bonusXP": 30
+  },
+  "clues": {
+    "across": [
+      { "number": 1,  "clue": "The control centre of a cell that contains DNA",                              "answer": "NUCLEUS",      "direction": "across", "row": 0,  "col": 0, "hint": "This organelle directs all cell activities and stores genetic information." },
+      { "number": 3,  "clue": "Group of similar cells performing the same function",                          "answer": "TISSUE",       "direction": "across", "row": 3,  "col": 1, "hint": "Muscle cells group together to form muscle ___." },
+      { "number": 5,  "clue": "A tiny hair-like structure on bacteria used for movement",                     "answer": "FLAGELLA",     "direction": "across", "row": 6,  "col": 5, "hint": "Like a whip or tail that helps bacteria swim." },
+      { "number": 7,  "clue": "The process of yeast converting sugar into alcohol and CO2",                   "answer": "FERMENTATION", "direction": "across", "row": 9,  "col": 2, "hint": "Yeast converts sugar into alcohol and CO2 through this process." },
+      { "number": 9,  "clue": "Membrane-bound structures within a cell such as mitochondria",                "answer": "ORGANELLES",   "direction": "across", "row": 12, "col": 0, "hint": "Think of these as tiny organs inside a cell, each with a specific job." }
+    ],
+    "down": [
+      { "number": 1,  "clue": "Single-celled microorganism without a defined nucleus",                         "answer": "BACTERIA",     "direction": "down",   "row": 0,  "col": 0, "hint": "Prokaryotic organisms; E. coli is an example." },
+      { "number": 2,  "clue": "Organisms composed of many cells such as humans and plants",                    "answer": "MULTICELLULAR","direction": "down",   "row": 0,  "col": 6, "hint": "Animals, plants, and fungi are all made of many cells working together." },
+      { "number": 4,  "clue": "Microscopic plant-like organisms that perform photosynthesis in water",         "answer": "MICROALGAE",   "direction": "down",   "row": 2,  "col": 3, "hint": "These green microbes make their own food using sunlight in water bodies." },
+      { "number": 6,  "clue": "Single-celled organism with a nucleus such as Amoeba or Paramecium",           "answer": "PROTOZOA",     "direction": "down",   "row": 4,  "col": 9, "hint": "Eukaryotic microorganisms that move using pseudopodia or cilia." },
+      { "number": 8,  "clue": "Disease-causing microorganism",                                                  "answer": "PATHOGEN",     "direction": "down",   "row": 7,  "col": 13,"hint": "Any microbe that makes you sick is called this." }
+    ]
+  }
+}

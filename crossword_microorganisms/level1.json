@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "title": "Microscopic Basics",
+    "level": 1,
+    "author": "Physics Wallah",
+    "size": {
+      "rows": 10,
+      "cols": 10
+    },
+    "maxXP": 100,
+    "bonusXP": 20,
+    "timeLimit": 300
+  },
+  "clues": {
+    "across": [
+      {
+        "number": 1,
+        "clue": "The basic unit of all living things",
+        "answer": "CELL",
+        "hint": "This is the smallest living unit; every organism is made of it",
+        "direction": "across",
+        "row": 0,
+        "col": 0
+      },
+      {
+        "number": 3,
+        "clue": "Cell organisation level between tissue and organ system",
+        "answer": "ORGAN",
+        "hint": "Your heart and lungs are examples of this level of organisation",
+        "direction": "across",
+        "row": 2,
+        "col": 0
+      },
+      {
+        "number": 5,
+        "clue": "The jelly-like substance filling a cell",
+        "answer": "CYTOPLASM",
+        "hint": "Think of it as the 'filling' inside the cell membrane",
+        "direction": "across",
+        "row": 4,
+        "col": 0
+      },
+      {
+        "number": 7,
+        "clue": "A type of microorganism that includes mushrooms and moulds",
+        "answer": "FUNGI",
+        "hint": "This kingdom includes yeast, moulds and mushrooms",
+        "direction": "across",
+        "row": 6,
+        "col": 0
+      },
+      {
+        "number": 9,
+        "clue": "Microbes that help convert atmospheric nitrogen into usable form",
+        "answer": "RHIZOBIUM",
+        "hint": "This helpful bacterium lives in the root nodules of legume plants",
+        "direction": "across",
+        "row": 8,
+        "col": 0
+      }
+    ],
+    "down": [
+      {
+        "number": 1,
+        "clue": "A plant cell has this rigid outer layer that animal cells lack",
+        "answer": "CELLWALL",
+        "hint": "Plants need this for structural support; animals do not have it",
+        "direction": "down",
+        "row": 0,
+        "col": 0
+      },
+      {
+        "number": 2,
+        "clue": "An instrument used to observe objects invisible to the naked eye",
+        "answer": "MICROSCOPE",
+        "hint": "Anton van Leeuwenhoek used this to first observe microbes",
+        "direction": "down",
+        "row": 0,
+        "col": 3
+      },
+      {
+        "number": 4,
+        "clue": "Organisms made of a single cell (e.g. Amoeba)",
+        "answer": "UNICELLULAR",
+        "hint": "Amoeba and Paramecium live their whole life as just ONE of these",
+        "direction": "down",
+        "row": 1,
+        "col": 5
+      },
+      {
+        "number": 6,
+        "clue": "Microorganism used to make curd and yoghurt",
+        "answer": "LACTOBACILLUS",
+        "hint": "Leave milk warm overnight with this microbe — you get curd!",
+        "direction": "down",
+        "row": 4,
+        "col": 7
+      },
+      {
+        "number": 8,
+        "clue": "The process by which microbes break down dead matter",
+        "answer": "DECOMPOSITION",
+        "hint": "Without this, dead leaves would never disappear from the forest floor",
+        "direction": "down",
+        "row": 6,
+        "col": 2
+      }
+    ]
+  }
+}

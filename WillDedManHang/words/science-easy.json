@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "ATOM",
+      "category": "Science",
+      "hint": "Smallest unit of a chemical element",
+      "educational": "An atom is the basic unit of matter consisting of protons, neutrons, and electrons. All elements are made of atoms."
+    },
+    {
+      "word": "ENERGY",
+      "category": "Science",
+      "hint": "Capacity to do work or cause change",
+      "educational": "Energy is the ability to do work. It exists in many forms including kinetic, potential, thermal, and chemical energy."
+    },
+    {
+      "word": "GRAVITY",
+      "category": "Science",
+      "hint": "Force that attracts objects toward each other",
+      "educational": "Gravity is a fundamental force that attracts all objects with mass toward each other. It keeps planets in orbit around the sun."
+    },
+    {
+      "word": "CELL",
+      "category": "Science",
+      "hint": "Basic unit of life in living organisms",
+      "educational": "Cells are the smallest units of life. All living things are made of one or more cells that carry out life processes."
+    },
+    {
+      "word": "OXYGEN",
+      "category": "Science",
+      "hint": "Gas essential for human breathing",
+      "educational": "Oxygen is a chemical element essential for respiration in most living organisms. It makes up about 21% of Earth's atmosphere."
+    },
+    {
+      "word": "PLANET",
+      "category": "Science",
+      "hint": "Celestial body orbiting a star",
+      "educational": "A planet is a large celestial body that orbits a star. Our solar system has eight planets including Earth."
+    },
+    {
+      "word": "LIGHT",
+      "category": "Science",
+      "hint": "Electromagnetic radiation visible to humans",
+      "educational": "Light is electromagnetic radiation that travels in waves. It moves at the fastest known speed in the universe."
+    },
+    {
+      "word": "WATER",
+      "category": "Science",
+      "hint": "Liquid compound essential for all life",
+      "educational": "Water (H2O) is a molecule made of hydrogen and oxygen. It's essential for all known forms of life on Earth."
+    },
+    {
+      "word": "FORCE",
+      "category": "Science",
+      "hint": "Push or pull that can change motion",
+      "educational": "Force is an interaction that can change an object's motion. It's measured in Newtons and described by Newton's laws of motion."
+    },
+    {
+      "word": "PHOTON",
+      "category": "Science",
+      "hint": "Particle of light energy",
+      "educational": "A photon is a fundamental particle of light and all other electromagnetic radiation. It has no mass but carries energy."
+    }
+  ]
+}
