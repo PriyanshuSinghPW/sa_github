@@ -128,7 +128,7 @@
     const startScore = Number(state.levelStartScores.get(numericLevel) || 0);
     const scoreAfter = Number(details.scoreAfter ?? details.scoreBeforeMove ?? startScore);
     const scoreGain = Number(details.scoreGain || 0);
-    const xpEarned = Math.max(0, Math.round(scoreAfter - startScore || scoreGain));
+    const xpEarned = 1;
     const timeTaken = Math.max(0, Date.now() - startedAt);
 
     analytics.addRawMetric(`level_${numericLevel}_moves_remaining`, String(details.movesRemaining || 0));
