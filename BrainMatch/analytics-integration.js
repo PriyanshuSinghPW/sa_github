@@ -33,11 +33,18 @@ function createRunId() {
 }
 
 function ensureCampaignRun(level) {
-  if (!currentRunId || level === 1) {
+  const submittedLevels = currentRunId ? submittedLevelsByRun.get(currentRunId) : null;
+  const isReplayAfterSubmit = Boolean(submittedLevels && submittedLevels.has(level));
+
+  if (!currentRunId || level === 1 || isReplayAfterSubmit) {
+    const previousRunId = currentRunId;
     currentRunId = createRunId();
     submittedLevelsByRun.set(currentRunId, new Set());
     analytics.initialize('BrainMatch', currentRunId);
     console.log('[Analytics] Started campaign run:', currentRunId);
+    if (isReplayAfterSubmit) {
+      console.log('[Analytics] Restarted campaign run for submitted level replay:', { previousRunId, currentRunId, level });
+    }
   }
 }
 

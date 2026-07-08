@@ -78,7 +78,9 @@
       return;
     }
 
-    const analytics = ensureAnalytics(Boolean(details.resetRun));
+    const isReplayAfterSubmit = state.submittedLevels.has(numericLevel);
+    const previousRunId = state.runId;
+    const analytics = ensureAnalytics(Boolean(details.resetRun) || isReplayAfterSubmit);
     if (!analytics) {
       return;
     }
@@ -102,6 +104,13 @@
       moves: details.moves,
       scoreStart: details.scoreStart || 0
     });
+    if (isReplayAfterSubmit) {
+      postAnalyticsDebug('run_restarted_for_level_replay', {
+        previousRunId,
+        runId: state.runId,
+        levelNumber: numericLevel
+      });
+    }
   }
 
   function completeLevel(levelNumber, details = {}) {

@@ -135,7 +135,7 @@ async function initializeGameManager() {
       progressBridge,
       storageManager,
       validator,
-      analyticsBridge: null, // analytics payload sent once at campaign end via analytics-integration.js
+      analyticsBridge: null, // level-wise analytics payloads are handled by analytics-integration.js
       config: CONFIG,
     });
     

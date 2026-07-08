@@ -203,11 +203,18 @@ function startAnalyticsLevel(level) {
     return;
   }
 
-  if (!analyticsRunId || level === 1) {
+  const isReplayAfterSubmit = analyticsSubmittedLevels.has(level);
+
+  if (!analyticsRunId || level === 1 || isReplayAfterSubmit) {
+    const previousRunId = analyticsRunId;
     analyticsRunId = createAnalyticsRunId();
     analyticsSubmittedLevels.clear();
     analytics.initialize('BrainMatch_Flags', analyticsRunId);
-    postAnalyticsDebug('campaign_run_started', { level, runId: analyticsRunId });
+    postAnalyticsDebug(isReplayAfterSubmit ? 'campaign_run_restarted_for_level_replay' : 'campaign_run_started', {
+      level,
+      runId: analyticsRunId,
+      previousRunId
+    });
   }
 
   analytics.startLevel(level, { levelNumber: level });
